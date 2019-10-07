@@ -1,7 +1,7 @@
-#Mon Oct 07 20:11:52 ICT 2019
-base.0=C\:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+#Mon Oct 07 20:26:37 ICT 2019
+base.0=D\:\\BDU\\projects\\android\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.1=D\:\\BDU\\projects\\android\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

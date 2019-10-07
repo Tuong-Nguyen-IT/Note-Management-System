@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "D:\\BDU\\projects\\android\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\46da25c3e2ae6308b2227b660caa604d\\core-1.0.1\\res\\values-v21\\values-v21.xml",
@@ -42,25 +42,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\src\\main\\res\\values-v21\\styles.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "19",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "246"
-                    },
-                    "to": {
-                        "startLines": "6",
-                        "startColumns": "4",
-                        "startOffsets": "354",
-                        "endLines": "10",
-                        "endColumns": "12",
-                        "endOffsets": "577"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,10,18,26",
@@ -77,6 +58,25 @@
                         "endLines": "291,299,307,315",
                         "endColumns": "10,10,10,10",
                         "endOffsets": "21076,21502,21925,22360"
+                    }
+                },
+                {
+                    "source": "D:\\BDU\\projects\\android\\Note-Management-System\\app\\src\\main\\res\\values-v21\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "19",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "246"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "354",
+                        "endLines": "10",
+                        "endColumns": "12",
+                        "endOffsets": "577"
                     }
                 },
                 {

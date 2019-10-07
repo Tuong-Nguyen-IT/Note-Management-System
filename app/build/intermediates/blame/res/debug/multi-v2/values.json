@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "D:\\BDU\\projects\\android\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,15,10,17",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "57,540,384,634",
-                        "endLines": "8,15,13,17",
-                        "endColumns": "12,90,12,80",
-                        "endOffsets": "376,626,532,710"
-                    },
-                    "to": {
-                        "startLines": "619,625,626,630",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "38329,38648,38738,38888",
-                        "endLines": "624,625,629,630",
-                        "endColumns": "12,89,12,79",
-                        "endOffsets": "38643,38733,38883,38963"
-                    }
-                },
                 {
                     "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\cbfe81a657ef2afb513a6ca64388f844\\coordinatorlayout-1.0.0\\res\\values\\values.xml",
                     "from": {
@@ -78,6 +59,25 @@
                     }
                 },
                 {
+                    "source": "D:\\BDU\\projects\\android\\Note-Management-System\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,15,10,17",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "57,540,384,634",
+                        "endLines": "8,15,13,17",
+                        "endColumns": "12,90,12,80",
+                        "endOffsets": "376,626,532,710"
+                    },
+                    "to": {
+                        "startLines": "619,625,626,630",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "38329,38648,38738,38888",
+                        "endLines": "624,625,629,630",
+                        "endColumns": "12,89,12,79",
+                        "endOffsets": "38643,38733,38883,38963"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\4ea847ccfe34de0657fc7a139eae5de8\\transition-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -114,23 +114,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\src\\main\\res\\values\\dimens.xml",
-                    "from": {
-                        "startLines": "2,3,6,5,4",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "90,149,316,265,206",
-                        "endColumns": "57,55,41,49,57",
-                        "endOffsets": "143,200,353,310,259"
-                    },
-                    "to": {
-                        "startLines": "334,335,392,454,455",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "19529,19587,23278,27167,27217",
-                        "endColumns": "57,55,41,49,57",
-                        "endOffsets": "19582,19638,23315,27212,27270"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\a81e6c348805ae7dff8b78d832e8b73a\\navigation-common-2.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,13,19,23,26",
@@ -147,6 +130,23 @@
                         "endLines": "4290,4296,4300,4303,4315",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "274536,274780,274933,275066,276063"
+                    }
+                },
+                {
+                    "source": "D:\\BDU\\projects\\android\\Note-Management-System\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "157,57,105",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "198,99,151"
+                    },
+                    "to": {
+                        "startLines": "192,193,194",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "9973,10019,10066",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "10014,10061,10112"
                     }
                 },
                 {
@@ -188,37 +188,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "D:\\BDU\\projects\\android\\Note-Management-System\\app\\src\\main\\res\\values\\dimens.xml",
                     "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "157,57,105",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "198,99,151"
+                        "startLines": "2,3,6,5,4",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "90,149,316,265,206",
+                        "endColumns": "57,55,41,49,57",
+                        "endOffsets": "143,200,353,310,259"
                     },
                     "to": {
-                        "startLines": "192,193,194",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "9973,10019,10066",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "10014,10061,10112"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "8,1,16,11,18,17,10,14,12,15,13,7,6,5,4,3,2",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "492,17,832,592,943,883,548,744,644,788,696,429,353,292,215,140,78",
-                        "endColumns": "52,59,49,50,64,58,42,42,50,42,46,61,74,59,75,73,60",
-                        "endOffsets": "540,72,877,638,1003,937,586,782,690,826,738,486,423,347,286,209,134"
-                    },
-                    "to": {
-                        "startLines": "576,577,585,586,587,588,589,590,591,592,593,597,598,599,600,601,609",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "34528,34581,35580,35630,35681,35746,35805,35848,35891,35942,35985,36276,36338,36413,36473,36549,37549",
-                        "endColumns": "52,59,49,50,64,58,42,42,50,42,46,61,74,59,75,73,60",
-                        "endOffsets": "34576,34636,35625,35676,35741,35800,35843,35886,35937,35980,36027,36333,36408,36468,36544,36618,37605"
+                        "startLines": "334,335,392,454,455",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "19529,19587,23278,27167,27217",
+                        "endColumns": "57,55,41,49,57",
+                        "endOffsets": "19582,19638,23315,27212,27270"
                     }
                 },
                 {
@@ -293,6 +276,23 @@
                         "endLines": "2,10,16,21,22,23,29,34,35,36,39,40,43,46,47,48,49,50,53,56,57,58,59,64,67,70,71,72,77,78,79,82,85,86,89,92,95,98,99,102,105,106,111,112,117,120,123,124,125,126,127,128,129,130,131,132,141,3785,3786,3787,4039",
                         "endColumns": "60,11,47,51,60,45,11,60,59,69,11,67,11,11,61,64,67,66,11,11,66,64,64,11,11,11,65,66,11,68,65,11,11,66,11,11,11,11,64,11,11,64,11,66,11,11,11,64,61,61,61,58,59,60,60,58,11,2575,131,3263,107",
                         "endOffsets": "206,497,829,1089,1150,1196,1439,1692,1752,1822,1955,2023,2152,2278,2340,2405,2473,2540,2663,2788,2855,2920,2985,3166,3287,3408,3474,3541,3751,3820,3886,4011,4137,4204,4330,4457,4582,4709,4774,4900,5023,5088,5296,5363,5543,5663,5783,5848,5910,5972,6034,6093,6153,6214,6275,6334,6709,241754,241886,245150,260656"
+                    }
+                },
+                {
+                    "source": "D:\\BDU\\projects\\android\\Note-Management-System\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "8,1,16,11,18,17,10,14,12,15,13,7,6,5,4,3,2",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "492,17,832,592,943,883,548,744,644,788,696,429,353,292,215,140,78",
+                        "endColumns": "52,59,49,50,64,58,42,42,50,42,46,61,74,59,75,73,60",
+                        "endOffsets": "540,72,877,638,1003,937,586,782,690,826,738,486,423,347,286,209,134"
+                    },
+                    "to": {
+                        "startLines": "576,577,585,586,587,588,589,590,591,592,593,597,598,599,600,601,609",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "34528,34581,35580,35630,35681,35746,35805,35848,35891,35942,35985,36276,36338,36413,36473,36549,37549",
+                        "endColumns": "52,59,49,50,64,58,42,42,50,42,46,61,74,59,75,73,60",
+                        "endOffsets": "34576,34636,35625,35676,35741,35800,35843,35886,35937,35980,36027,36333,36408,36468,36544,36618,37605"
                     }
                 },
                 {

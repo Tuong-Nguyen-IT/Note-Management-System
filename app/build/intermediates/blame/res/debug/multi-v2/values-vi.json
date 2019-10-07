@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Tuong Nguyen\\AndroidStudioProjects\\NoteManagementSystem\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
+            "outputFile": "D:\\BDU\\projects\\android\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\0f0ef586f3bc49c07bc92feab62e14ca\\jetified-navigation-ui-2.0.0\\res\\values-vi\\values-vi.xml",
