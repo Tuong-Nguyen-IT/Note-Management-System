@@ -1098,6 +1098,8 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button
+id button2
 id buttonPanel
 id cancel_action
 id center
@@ -1134,7 +1136,8 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
+id fab_cate
+id fab_prio
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1161,8 +1164,11 @@ id largeLabel
 id left
 id line1
 id line3
+id linearLayout
 id listMode
 id list_item
+id lvcate
+id lvprio
 id masked
 id media_actions
 id message
@@ -1274,6 +1280,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tv_cate
 id uniform
 id unlabeled
 id up
@@ -1349,6 +1356,8 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout dialog_category
+layout dialog_priority
 layout fragment_category
 layout fragment_change_password
 layout fragment_edit_profile
