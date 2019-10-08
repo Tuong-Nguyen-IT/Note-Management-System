@@ -14,7 +14,21 @@
     <string name="menu_status">Status</string>
     <string name="menu_note">Note</string>
     <string name="menu_send">Send</string>
+
     <string name="label_account">Account</string>
     <string name="menu_edit_profile">Edit profile</string>
     <string name="menu_change_password">Change password</string>
+    
+    <string name="label_edit_profile">Edit profile</string>
+    <string name="hint_enter_first_name">Enter your first name</string>
+    <string name="hint_enter_last_name">Enter your last name</string>
+    <string name="hint_enter_email">Enter your email</string>
+    <string name="button_home">Home</string>
+    <string name="button_change">Change</string>
+
+    <string name="label_change_password">Change your password</string>
+    <string name="hint_enter_current_pwd">Enter current password</string>
+    <string name="hint_enter_new_pwd">Enter new password</string>
+    <string name="hint_enter_confirm_pwd">Enter password again</string>
+    
 </resources>
