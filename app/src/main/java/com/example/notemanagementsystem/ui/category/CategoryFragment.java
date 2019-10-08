@@ -43,6 +43,9 @@ public class CategoryFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final String[] abc = new String[10];
+        for (int i = 0; i < 10; i++) {
+            abc[i] = "00";
+        }
         ListView lv = (ListView) getView().findViewById(R.id.lvcate);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (getActivity(), android.R.layout.simple_list_item_1, abc);

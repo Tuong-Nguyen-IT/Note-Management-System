@@ -43,16 +43,19 @@ public class PriorityFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final String[] abc = new String[10];
-        ListView lv = (ListView) getView().findViewById(R.id.lvcate);
+        for (int i = 0; i < 10; i++) {
+            abc[i] = "00";
+        }
+        ListView lv = (ListView) getView().findViewById(R.id.lvprio);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (getActivity(), android.R.layout.simple_list_item_1, abc);
         lv.setAdapter(adapter);
-        fab = (FloatingActionButton) getView().findViewById(R.id.fab_cate);
+        fab = (FloatingActionButton) getView().findViewById(R.id.fab_prio);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Dialog dialog = new Dialog(getActivity());
-                dialog.setContentView(R.layout.dialog_category);
+                dialog.setContentView(R.layout.dialog_priority);
                 dialog.show();
             }
         });

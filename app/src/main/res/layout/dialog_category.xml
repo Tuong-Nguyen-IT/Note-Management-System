@@ -8,7 +8,7 @@
         android:id="@+id/tv_cate"
         android:layout_width="600dp"
         android:layout_height="wrap_content"
-        android:text="Category Form" />
+        android:text="@string/category_form" />
 
     <EditText
         android:layout_width="match_parent"
@@ -23,13 +23,14 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:text="@string/add" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
             android:gravity="right"
-            android:text="Close" />
+            android:text="@string/close" />
     </LinearLayout>
 </LinearLayout>
