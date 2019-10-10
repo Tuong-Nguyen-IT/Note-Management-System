@@ -1098,8 +1098,12 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button
-id button2
+id btn_cate_add
+id btn_cate_cancel
+id btn_prio_add
+id btn_prio_cancel
+id btnsi
+id btnsu
 id buttonPanel
 id buttonadd
 id buttoncalender
@@ -1135,6 +1139,7 @@ id disableHome
 id drawer_layout
 id editText
 id edit_query
+id email
 id end
 id end_padder
 id enterAlways
@@ -1208,11 +1213,14 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id password
 id percent
+id piechart
 id pin
 id progress_circular
 id progress_horizontal
 id radio
+id repassword
 id right
 id right_icon
 id right_side
@@ -1276,7 +1284,6 @@ id textView2
 id textView3
 id textView4
 id textViewPlaindate
-id text_home
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
