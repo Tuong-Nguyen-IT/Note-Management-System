@@ -6,146 +6,65 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-<<<<<<< HEAD
-8-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml
+8-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml
+9-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:5:5-31:19
+11-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:5:5-26:19
 12        android:allowBackup="true"
-12-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:6:9-35
+12-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.0.1] C:\Users\Tuong Nguyen\.gradle\caches\transforms-2\files-2.1\46da25c3e2ae6308b2227b660caa604d\core-1.0.1\AndroidManifest.xml:22:18-86
+13-->[androidx.core:core:1.0.1] C:\Users\51202\.gradle\caches\transforms-2\files-2.1\46da25c3e2ae6308b2227b660caa604d\core-1.0.1\AndroidManifest.xml:22:18-86
 14        android:debuggable="true"
 15        android:icon="@mipmap/ic_launcher"
-15-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:7:9-43
+15-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:7:9-43
 16        android:label="@string/app_name"
-16-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:8:9-41
+16-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:8:9-41
 17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:9:9-54
+17-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:9:9-54
 18        android:supportsRtl="true"
-18-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:10:9-35
+18-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:10:9-35
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
-20-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:11:9-40
+20-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:11:9-40
 21        <activity
-21-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:13:9-22:20
+21-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:13:9-17:20
 22            android:name="com.example.notemanagementsystem.MainActivity"
-22-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:14:13-41
+22-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:14:13-41
 23            android:label="@string/title_activity_main"
-23-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:15:13-56
+23-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:15:13-56
 24            android:theme="@style/AppTheme.NoActionBar" >
-24-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:16:13-56
-25            <intent-filter>
-25-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:17:13-21:29
-26                <action android:name="android.intent.action.MAIN" />
-26-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:18:17-69
-26-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:18:25-66
-27
-28                <category android:name="android.intent.category.LAUNCHER" />
-28-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:20:17-77
-28-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:20:27-74
-29            </intent-filter>
-30        </activity>
-31        <activity android:name="com.example.notemanagementsystem.SignUpActivity" />
-31-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:23:9-52
-31-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:23:19-49
-32        <activity android:name="com.example.notemanagementsystem.LoginActivity" >
-32-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:24:9-30:20
-32-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:24:19-48
-33            <intent-filter>
-33-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:17:13-21:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:18:17-69
-34-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:18:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:20:17-77
-36-->D:\projects\Note-Management-System\app\src\main\AndroidManifest.xml:20:27-74
-=======
-8-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml
-9        android:targetSdkVersion="29" />
-9-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml
-10
-11    <application
-11-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:5:5-31:19
-12        android:allowBackup="true"
-12-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.0.1] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\46da25c3e2ae6308b2227b660caa604d\core-1.0.1\AndroidManifest.xml:22:18-86
-14        android:debuggable="true"
-15        android:icon="@mipmap/ic_launcher"
-15-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:7:9-43
-16        android:label="@string/app_name"
-16-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:8:9-41
-17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:9:9-54
-18        android:supportsRtl="true"
-18-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:10:9-35
-19        android:testOnly="true"
-20        android:theme="@style/AppTheme" >
-20-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:11:9-40
-21        <activity
-21-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:13:9-22:20
-22            android:name="com.example.notemanagementsystem.MainActivity"
-22-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:14:13-41
-23            android:label="@string/title_activity_main"
-23-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:15:13-56
-24            android:theme="@style/AppTheme.NoActionBar" >
-24-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:16:13-56
-25            <intent-filter>
-25-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:17:13-21:29
-26                <action android:name="android.intent.action.MAIN" />
-26-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:18:17-69
-26-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:18:25-66
-27
-28                <category android:name="android.intent.category.LAUNCHER" />
-28-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:20:17-77
-28-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:20:27-74
-29            </intent-filter>
-30        </activity>
-31        <activity android:name="com.example.notemanagementsystem.SignUpActivity" />
-31-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:23:9-52
-31-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:23:19-49
-32        <activity android:name="com.example.notemanagementsystem.LoginActivity" >
-32-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:24:9-30:20
-32-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:24:19-48
-33            <intent-filter>
-33-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:17:13-21:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:18:17-69
-34-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:18:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:20:17-77
-36-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:20:27-74
->>>>>>> d1379d168fa7088ac9bde57d5684733496856462
-37            </intent-filter>
-38        </activity>
-39
-40        <provider
-<<<<<<< HEAD
-40-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Tuong Nguyen\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
-41            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-41-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Tuong Nguyen\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
-42            android:authorities="com.example.notemanagementsystem.lifecycle-process"
-42-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Tuong Nguyen\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
-43            android:exported="false"
-43-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Tuong Nguyen\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
-44            android:multiprocess="true" />
-44-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Tuong Nguyen\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
-=======
-40-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
-41            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-41-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
-42            android:authorities="com.example.notemanagementsystem.lifecycle-process"
-42-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
-43            android:exported="false"
-43-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
-44            android:multiprocess="true" />
-44-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
->>>>>>> d1379d168fa7088ac9bde57d5684733496856462
-45    </application>
-46
-47</manifest>
+24-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:16:13-56
+25        </activity>
+26        <activity android:name="com.example.notemanagementsystem.SignUpActivity" />
+26-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:18:9-52
+26-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:18:19-49
+27        <activity android:name="com.example.notemanagementsystem.LoginActivity" >
+27-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:19:9-25:20
+27-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:19:19-48
+28            <intent-filter>
+28-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:20:13-24:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:21:17-69
+29-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:21:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:23:17-77
+31-->C:\Users\51202\Desktop\project\Note-Management-System\app\src\main\AndroidManifest.xml:23:27-74
+32            </intent-filter>
+33        </activity>
+34
+35        <provider
+35-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\51202\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+36            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+36-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\51202\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+37            android:authorities="com.example.notemanagementsystem.lifecycle-process"
+37-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\51202\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+38            android:exported="false"
+38-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\51202\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+39            android:multiprocess="true" />
+39-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\51202\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+40    </application>
+41
+42</manifest>

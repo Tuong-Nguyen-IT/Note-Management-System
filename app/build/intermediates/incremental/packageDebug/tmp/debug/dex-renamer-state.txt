@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-#Fri Oct 11 10:41:21 ICT 2019
-base.0=D\:\\projects\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
-=======
-#Fri Oct 11 05:42:49 ICT 2019
-base.0=D\:\\DH-N3\\ChuyenDeXayDungUngDungTrenThietBiDiDong\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
->>>>>>> d1379d168fa7088ac9bde57d5684733496856462
+#Fri Oct 11 22:04:36 ICT 2019
+base.0=C\:\\Users\\51202\\Desktop\\project\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-<<<<<<< HEAD
-base.1=D\:\\projects\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
-=======
-base.1=D\:\\DH-N3\\ChuyenDeXayDungUngDungTrenThietBiDiDong\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
->>>>>>> d1379d168fa7088ac9bde57d5684733496856462
+base.1=C\:\\Users\\51202\\Desktop\\project\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

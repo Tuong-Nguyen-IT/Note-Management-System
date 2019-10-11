@@ -1,34 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "D:\\projects\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ja\\values-ja.xml",
+            "outputFile": "C:\\Users\\51202\\Desktop\\project\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ja\\values-ja.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\0f0ef586f3bc49c07bc92feab62e14ca\\jetified-navigation-ui-2.0.0\\res\\values-ja\\values-ja.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,154",
-                        "endColumns": "98,109",
-                        "endOffsets": "149,259"
-                    },
-                    "to": {
-                        "startLines": "29,30",
-                        "startColumns": "4,4",
-                        "startOffsets": "2693,2792",
-                        "endColumns": "98,109",
-                        "endOffsets": "2787,2897"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-ja\\values-ja.xml",
-=======
-            "outputFile": "D:\\DH-N3\\ChuyenDeXayDungUngDungTrenThietBiDiDong\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ja\\values-ja.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-ja\\values-ja.xml",
->>>>>>> d1379d168fa7088ac9bde57d5684733496856462
+                    "source": "C:\\Users\\51202\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-ja\\values-ja.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -45,28 +21,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\46da25c3e2ae6308b2227b660caa604d\\core-1.0.1\\res\\values-ja\\values-ja.xml",
-=======
-                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\46da25c3e2ae6308b2227b660caa604d\\core-1.0.1\\res\\values-ja\\values-ja.xml",
->>>>>>> d1379d168fa7088ac9bde57d5684733496856462
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "32",
-                        "startColumns": "4",
-                        "startOffsets": "2980",
-                        "endColumns": "100",
-                        "endOffsets": "3076"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\0d898b0b35d27962ce41ec0931d22457\\jetified-navigation-ui-2.0.0\\res\\values-ja\\values-ja.xml",
+                    "source": "C:\\Users\\51202\\.gradle\\caches\\transforms-2\\files-2.1\\659f492594c047f6b25e7f4f78422c85\\jetified-navigation-ui-2.0.0\\res\\values-ja\\values-ja.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -80,6 +35,23 @@
                         "startOffsets": "2693,2792",
                         "endColumns": "98,109",
                         "endOffsets": "2787,2897"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\51202\\.gradle\\caches\\transforms-2\\files-2.1\\46da25c3e2ae6308b2227b660caa604d\\core-1.0.1\\res\\values-ja\\values-ja.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "32",
+                        "startColumns": "4",
+                        "startOffsets": "2980",
+                        "endColumns": "100",
+                        "endOffsets": "3076"
                     }
                 }
             ]

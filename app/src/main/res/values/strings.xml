@@ -42,6 +42,14 @@
     <string name="hint_enter_new_pwd">Enter new password</string>
     <string name="hint_confirm_pwd">Enter password again</string>
 
+    <!--Hoang My 10/11/2019-->
+    <string name="label_login">Note Management System</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="check_remember">Remember Me</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="button_exit">Exit</string>
+
 
 
 

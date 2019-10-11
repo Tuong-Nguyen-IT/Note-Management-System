@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"mName":"debug","mStoreFile":"C:\\Users\\Tuong Nguyen\\.android\\debug.keystore","mStorePassword":"android","mKeyAlias":"AndroidDebugKey","mKeyPassword":"android","mStoreType":"jks","mV1SigningEnabled":true,"mV2SigningEnabled":true}
-=======
-{"mName":"debug","mStoreFile":"C:\\Users\\ngoct\\.android\\debug.keystore","mStorePassword":"android","mKeyAlias":"AndroidDebugKey","mKeyPassword":"android","mStoreType":"jks","mV1SigningEnabled":true,"mV2SigningEnabled":true}
->>>>>>> d1379d168fa7088ac9bde57d5684733496856462
+{"mName":"debug","mStoreFile":"C:\\Users\\51202\\.android\\debug.keystore","mStorePassword":"android","mKeyAlias":"AndroidDebugKey","mKeyPassword":"android","mStoreType":"jks","mV1SigningEnabled":true,"mV2SigningEnabled":true}

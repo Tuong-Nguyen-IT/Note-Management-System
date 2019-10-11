@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "D:\\projects\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\51202\\Desktop\\project\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\e7201af0ac6a1eb782d2b896d1ec4242\\media-1.0.0\\res\\values-v24\\values-v24.xml",
-=======
-            "outputFile": "D:\\DH-N3\\ChuyenDeXayDungUngDungTrenThietBiDiDong\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\e7201af0ac6a1eb782d2b896d1ec4242\\media-1.0.0\\res\\values-v24\\values-v24.xml",
->>>>>>> d1379d168fa7088ac9bde57d5684733496856462
+                    "source": "C:\\Users\\51202\\.gradle\\caches\\transforms-2\\files-2.1\\e7201af0ac6a1eb782d2b896d1ec4242\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -28,11 +21,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-v24\\values-v24.xml",
-=======
-                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-v24\\values-v24.xml",
->>>>>>> d1379d168fa7088ac9bde57d5684733496856462
+                    "source": "C:\\Users\\51202\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
