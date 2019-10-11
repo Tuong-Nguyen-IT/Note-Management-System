@@ -20,16 +20,15 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_cate_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/add" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_cate_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="220dp"
             android:gravity="right"
             android:text="@string/close" />
     </LinearLayout>
