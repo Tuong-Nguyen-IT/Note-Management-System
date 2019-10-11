@@ -1,6 +1,7 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "D:\\projects\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-af\\values-af.xml",
             "map": [
                 {
@@ -22,6 +23,12 @@
                 },
                 {
                     "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\46da25c3e2ae6308b2227b660caa604d\\core-1.0.1\\res\\values-af\\values-af.xml",
+=======
+            "outputFile": "D:\\DH-N3\\ChuyenDeXayDungUngDungTrenThietBiDiDong\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-af\\values-af.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\46da25c3e2ae6308b2227b660caa604d\\core-1.0.1\\res\\values-af\\values-af.xml",
+>>>>>>> d1379d168fa7088ac9bde57d5684733496856462
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +45,28 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\0f0ef586f3bc49c07bc92feab62e14ca\\jetified-navigation-ui-2.0.0\\res\\values-af\\values-af.xml",
+=======
+                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-af\\values-af.xml",
+>>>>>>> d1379d168fa7088ac9bde57d5684733496856462
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,157",
+                        "endColumns": "101,116",
+                        "endOffsets": "152,269"
+                    },
+                    "to": {
+                        "startLines": "29,30",
+                        "startColumns": "4,4",
+                        "startOffsets": "2776,2878",
+                        "endColumns": "101,116",
+                        "endOffsets": "2873,2990"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\0d898b0b35d27962ce41ec0931d22457\\jetified-navigation-ui-2.0.0\\res\\values-af\\values-af.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
