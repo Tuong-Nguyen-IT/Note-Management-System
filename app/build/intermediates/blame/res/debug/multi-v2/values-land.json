@@ -1,10 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\chung\\AndroidStudioProjects\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+<<<<<<< HEAD
+            "outputFile": "D:\\projects\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\chung\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-land\\values-land.xml",
+=======
+            "outputFile": "D:\\DH-N3\\ChuyenDeXayDungUngDungTrenThietBiDiDong\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-land\\values-land.xml",
+>>>>>>> d1379d168fa7088ac9bde57d5684733496856462
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +21,11 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\chung\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\values-land\\values-land.xml",
+<<<<<<< HEAD
+                    "source": "C:\\Users\\Tuong Nguyen\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\values-land\\values-land.xml",
+=======
+                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\values-land\\values-land.xml",
+>>>>>>> d1379d168fa7088ac9bde57d5684733496856462
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -29,6 +29,19 @@
     <string name="edit_status">Select status...</string>
     <string name="edit_date">Select plain date</string>
 
+    <!--Tuong Nguyen 10/11/2019-->
+    <string name="label_edit_profile">Edit profile</string>
+    <string name="hint_enter_first_name">Enter your first name</string>
+    <string name="hint_enter_last_name">Enter your last name</string>
+    <string name="hint_enter_email">Enter your email</string>
+    <string name="button_change">Change</string>
+    <string name="button_home">Home</string>
+
+    <string name="label_change_pwd">Change your password</string>
+    <string name="hint_enter_current_pwd">Enter your current password</string>
+    <string name="hint_enter_new_pwd">Enter new password</string>
+    <string name="hint_confirm_pwd">Enter password again</string>
+
 
 
 
