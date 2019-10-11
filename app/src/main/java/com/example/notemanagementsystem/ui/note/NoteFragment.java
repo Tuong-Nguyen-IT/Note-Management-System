@@ -97,13 +97,13 @@ public class NoteFragment extends Fragment implements DatePickerDialog.OnDateSet
 
     private void showDatePicker(){
         DatePickerDialog datePickerDialog = new DatePickerDialog(
-                getActivity(),
+                getActivity(),R.style.FullScreenDialog,
                 this,
                 Calendar.getInstance().get(Calendar.YEAR),
                 Calendar.getInstance().get(Calendar.MONTH),
                 Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
         );
-
+        datePickerDialog.setTitle("Select the date");
         datePickerDialog.show();
     }
 
