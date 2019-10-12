@@ -91,10 +91,7 @@ public class NoteFragment extends Fragment implements DatePickerDialog.OnDateSet
                 dialog.dismiss();
             }
         });
-
-
     }
-
     private void showDatePicker(){
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 getActivity(),R.style.FullScreenDialog,
@@ -106,7 +103,6 @@ public class NoteFragment extends Fragment implements DatePickerDialog.OnDateSet
         datePickerDialog.setTitle("Select the date");
         datePickerDialog.show();
     }
-
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         String date =dayOfMonth +"/"+month+"/"+year;

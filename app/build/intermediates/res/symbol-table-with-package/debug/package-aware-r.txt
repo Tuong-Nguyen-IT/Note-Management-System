@@ -1123,8 +1123,6 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
-id constraintLayout2
-id constraintLayout3
 id container
 id content
 id contentPanel
@@ -1183,6 +1181,7 @@ id left
 id line1
 id line3
 id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id lvcate
