@@ -46,7 +46,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 CATEGORY_NAME + " text" +
                 ")";
         db.execSQL(sql);
-    }
+}
 
     public void addCategory(Category category) {
         SQLiteDatabase db = this.getWritableDatabase();
