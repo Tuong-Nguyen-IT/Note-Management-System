@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.time.Instant;
+
 public class LoginActivity extends AppCompatActivity {
     private TextView txtEmail;
     private TextView txtPassword;
@@ -25,6 +27,13 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         addControls();
         addEvents();
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(a);
+            }
+        });
     }
 
     private void addEvents() {
