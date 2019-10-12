@@ -1102,8 +1102,6 @@ id btnChange
 id btnExit
 id btnHome
 id btnSignIn
-id btn_cate_add
-id btn_cate_cancel
 id btn_prio_add
 id btn_prio_cancel
 id btnsi
@@ -1147,6 +1145,7 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id etname
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1180,7 +1179,6 @@ id largeLabel
 id left
 id line1
 id line3
-id linearLayout
 id linearLayout2
 id listMode
 id list_item
@@ -1306,6 +1304,8 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvCreatedDate
+id tvName
 id tv_cate
 id txtConfirmPwd
 id txtCurrentPwd
@@ -1399,6 +1399,7 @@ layout fragment_home
 layout fragment_note
 layout fragment_priority
 layout fragment_status
+layout lv_category
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header_main

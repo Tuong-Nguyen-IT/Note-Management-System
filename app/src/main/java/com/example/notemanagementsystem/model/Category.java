@@ -1,29 +1,16 @@
 package com.example.notemanagementsystem.model;
 
 public class Category {
-    private int id;
     private String name;
-
-
-
-    public Category(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    private String createdDate;
 
     public Category(String name) {
         this.name = name;
     }
 
-    public Category() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public Category(String name, String createdDate) {
+        this.name = name;
+        this.createdDate = createdDate;
     }
 
     public String getName() {
@@ -34,8 +21,12 @@ public class Category {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "id: "+ this.id + "\nName: "+ this.name;
+    public String getCreatedDate() {
+        return createdDate;
     }
+
+    public void setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
+    }
+
 }
