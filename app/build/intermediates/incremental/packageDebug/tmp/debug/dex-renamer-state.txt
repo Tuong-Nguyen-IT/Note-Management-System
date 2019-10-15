@@ -1,7 +1,7 @@
-#Sat Oct 12 08:37:37 ICT 2019
-base.0=C\:\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+#Tue Oct 15 17:04:23 ICT 2019
+base.0=E\:\\Hoctap\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.1=E\:\\Hoctap\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
