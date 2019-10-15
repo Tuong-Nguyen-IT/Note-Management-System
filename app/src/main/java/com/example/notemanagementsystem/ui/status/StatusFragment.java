@@ -19,6 +19,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.notemanagementsystem.R;
+import com.example.notemanagementsystem.adapter.StatusAdapter;
+import com.example.notemanagementsystem.model.Status;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -52,15 +54,17 @@ public class StatusFragment extends Fragment {
         btS = (FloatingActionButton) getView().findViewById(R.id.floatingActionButton2);
         edList = (ListView) getView().findViewById(R.id.listStatus);
 
-        listString.add("Status 1");
-        listString.add("Status 2");
-        listString.add("Status 3");
-        listString.add("Status 4");
-        listString.add("Status 5");
-        listString.add("Status 6");
-        listString.add("Status 7");
+        btS = (FloatingActionButton) getView().findViewById(R.id.floatingActionButton2);
+        ArrayList<Status> test = new ArrayList<>();
 
-        ArrayAdapter adapter = new ArrayAdapter(getActivity(),android.R.layout.simple_list_item_1,listString);
+        edList = (ListView) getView().findViewById(R.id.listStatus);
+
+        Status a = new Status();
+        a.setName("name 1");
+        a.setDate("date 1");
+        test.add(a);
+
+        StatusAdapter adapter = new StatusAdapter(getActivity(),test);
         edList.setAdapter(adapter);
 
         btS.setOnClickListener(new View.OnClickListener() {
