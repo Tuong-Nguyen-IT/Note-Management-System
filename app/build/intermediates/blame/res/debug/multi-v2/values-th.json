@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-th\\values-th.xml",
+            "outputFile": "C:\\Users\\Dell\\Documents\\GitHub\\Note-Management-System\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-th\\values-th.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\0d898b0b35d27962ce41ec0931d22457\\jetified-navigation-ui-2.0.0\\res\\values-th\\values-th.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,159",
-                        "endColumns": "103,113",
-                        "endOffsets": "154,268"
-                    },
-                    "to": {
-                        "startLines": "29,30",
-                        "startColumns": "4,4",
-                        "startOffsets": "2764,2868",
-                        "endColumns": "103,113",
-                        "endOffsets": "2863,2977"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-th\\values-th.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-th\\values-th.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ngoct\\.gradle\\caches\\transforms-2\\files-2.1\\46da25c3e2ae6308b2227b660caa604d\\core-1.0.1\\res\\values-th\\values-th.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-2\\files-2.1\\46da25c3e2ae6308b2227b660caa604d\\core-1.0.1\\res\\values-th\\values-th.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -52,6 +35,23 @@
                         "startOffsets": "3063",
                         "endColumns": "100",
                         "endOffsets": "3159"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-2\\files-2.1\\fded935683288e5c0bc4d4744bf85f4c\\jetified-navigation-ui-2.0.0\\res\\values-th\\values-th.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,159",
+                        "endColumns": "103,113",
+                        "endOffsets": "154,268"
+                    },
+                    "to": {
+                        "startLines": "29,30",
+                        "startColumns": "4,4",
+                        "startOffsets": "2764,2868",
+                        "endColumns": "103,113",
+                        "endOffsets": "2863,2977"
                     }
                 }
             ]
