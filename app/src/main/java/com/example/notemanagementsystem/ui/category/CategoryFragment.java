@@ -12,7 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -144,5 +147,53 @@ public class CategoryFragment extends Fragment {
 
         mAlertDialog.show();
     }
+    @Override
+    public void onCreateContextMenu(@NonNull ContextMenu menu, @NonNull View v, @Nullable ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater menuInflater = getActivity().getMenuInflater();
+        menuInflater.inflate(R.menu.context, menu);
+    }
 
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        switch (itemId) {
+            case R.id.edit:
+                if (category != null) {
+                    showDialog(category);
+                }
+                break;
+            case R.id.delete:
+                deleteCategory();
+                break;
+        }
+        return super.onContextItemSelected(item);
+    }
+
+    private void deleteCategory() {
+
+        if (category == null) {
+            return;
+        }
+        AlertDialog.Builder al = new AlertDialog.Builder(getActivity());
+        al.setTitle("Confirm Delete...");
+        al.setCancelable(false);
+        al.setMessage("Are you sure you want delete this " + category.getName() + "?");
+        al.setPositiveButton("YES",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (categoryViewModel.deleteCategory(category.getName()) > 0) {
+                            Toast.makeText(getActivity(), "Delete category successfully", Toast.LENGTH_LONG).show();
+                            categoryViewModel.getCategories().setValue(categoryViewModel.getAllCategories());
+                        }
+                    }
+                });
+        al.setNegativeButton("NO",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        al.show();
+    }
 }

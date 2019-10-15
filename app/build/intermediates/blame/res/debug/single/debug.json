@@ -1640,6 +1640,10 @@
         "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\drawable\\navigation_empty_icon.xml"
     },
     {
+        "merged": "E:\\Hoctap\\Note-Management-System\\app\\build\\intermediates\\res\\merged\\debug\\menu_context.xml.flat",
+        "source": "E:\\Hoctap\\Note-Management-System\\app\\src\\main\\res\\menu\\context.xml"
+    },
+    {
         "merged": "E:\\Hoctap\\Note-Management-System\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },

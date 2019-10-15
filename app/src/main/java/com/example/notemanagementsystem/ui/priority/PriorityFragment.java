@@ -12,7 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -150,5 +153,54 @@ public class PriorityFragment extends Fragment {
         });
 
         mAlertDialog.show();
+    }
+    @Override
+    public void onCreateContextMenu(@NonNull ContextMenu menu, @NonNull View v, @Nullable ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater menuInflater = getActivity().getMenuInflater();
+        menuInflater.inflate(R.menu.context, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        switch (itemId) {
+            case R.id.edit:
+                if (priority != null) {
+                    showDialog(priority);
+                }
+                break;
+            case R.id.delete:
+                deleteCategory();
+                break;
+        }
+        return super.onContextItemSelected(item);
+    }
+
+    private void deleteCategory() {
+
+        if (priority == null) {
+            return;
+        }
+        AlertDialog.Builder al = new AlertDialog.Builder(getActivity());
+        al.setTitle("Confirm Delete...");
+        al.setCancelable(false);
+        al.setMessage("Are you sure you want delete this " + priority.getName() + "?");
+        al.setPositiveButton("YES",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (priorityViewModel.deletePriority(priority.getName()) > 0) {
+                            Toast.makeText(getActivity(), "Delete priority successfully", Toast.LENGTH_LONG).show();
+                            priorityViewModel.getPriorities().setValue(priorityViewModel.getAllPriorities());
+                        }
+                    }
+                });
+        al.setNegativeButton("NO",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        al.show();
     }
 }
