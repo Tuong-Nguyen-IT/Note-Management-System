@@ -128,12 +128,12 @@ public class CategoryFragment extends Fragment {
                         if (category == null) {
                             ret = categoryViewModel.addCategory(new Category(name));
                             if (ret > 0) {
-                                Toast.makeText(getActivity(), "Add priority successfully", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity(), "Add category successfully", Toast.LENGTH_LONG).show();
                             }
                         } else {
                             ret = categoryViewModel.updateCategory(category.getName(), new Category(name));
                             if (ret > 0) {
-                                Toast.makeText(getActivity(), "Update priority successfully", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity(), "Update category successfully", Toast.LENGTH_LONG).show();
                             }
                         }
                         if (ret > 0) {
