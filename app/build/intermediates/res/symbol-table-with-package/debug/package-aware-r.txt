@@ -1314,6 +1314,8 @@ id transition_transform
 id tvCreatedDate
 id tvName
 id tv_cate
+id tv_status_date
+id tv_status_name
 id txtConfirmPwd
 id txtCurrentPwd
 id txtEmail
@@ -1409,6 +1411,7 @@ layout fragment_priority
 layout fragment_status
 layout lv_category
 layout lv_priority
+layout lv_status
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header_main
