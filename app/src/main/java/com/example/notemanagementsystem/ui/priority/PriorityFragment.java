@@ -64,19 +64,19 @@ public class PriorityFragment extends Fragment {
         registerForContextMenu(lvPriority);
 
         data = new ArrayList<>();
-        adapter = new PriorityAdapter(getActivity(), R.layout.lv_category, data);
+        adapter = new PriorityAdapter(getActivity(), R.layout.lv_priority, data);
         lvPriority.setAdapter(adapter);
 
-        final Observer<ArrayList<Priority>> categoryObserver = new Observer<ArrayList<Priority>>() {
+        final Observer<ArrayList<Priority>> priorityObserver = new Observer<ArrayList<Priority>>() {
             @Override
-            public void onChanged(ArrayList<Priority> categories) {
+            public void onChanged(ArrayList<Priority> priorities) {
                 data.clear();
-                data.addAll(categories);
+                data.addAll(priorities);
                 adapter.notifyDataSetChanged();
             }
         };
 
-        priorityViewModel.getPriorities().observe(this, categoryObserver);
+        priorityViewModel.getPriorities().observe(this, priorityObserver);
 
         addPriority(root);
         return root;
@@ -126,7 +126,7 @@ public class PriorityFragment extends Fragment {
                     public void onClick(View view) {
                         String name = etName.getText().toString();
                         if (name.isEmpty()) {
-                            Toast.makeText(getActivity(), "Please enter category name", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), "Please enter priority name", Toast.LENGTH_LONG).show();
                             etName.requestFocus();
                             return;
                         }
@@ -135,12 +135,12 @@ public class PriorityFragment extends Fragment {
                         if (priority == null) {
                             ret = priorityViewModel.addPriority(new Priority(name));
                             if (ret > 0) {
-                                Toast.makeText(getActivity(), "Add catetory successfully", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity(), "Add priority successfully", Toast.LENGTH_LONG).show();
                             }
                         } else {
                             ret = priorityViewModel.updatePriority(priority.getName(), new Priority(name));
                             if (ret > 0) {
-                                Toast.makeText(getActivity(), "Update catetory successfully", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity(), "Update priority successfully", Toast.LENGTH_LONG).show();
                             }
                         }
                         if (ret > 0) {
@@ -171,13 +171,13 @@ public class PriorityFragment extends Fragment {
                 }
                 break;
             case R.id.delete:
-                deleteCategory();
+                deletePriority();
                 break;
         }
         return super.onContextItemSelected(item);
     }
 
-    private void deleteCategory() {
+    private void deletePriority() {
 
         if (priority == null) {
             return;

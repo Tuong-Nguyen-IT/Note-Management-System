@@ -53,9 +53,9 @@ public class PriorityAdapter extends BaseAdapter {
             vh = (PriorityAdapter.ViewHolder) view.getTag();
         }
         if (data.size() > 0) {
-            Priority category = data.get(i);
-            vh.tvName.setText("Name: " + category.getName());
-            vh.tvCreatedDate.setText("Created Date: " + category.getCreatedDate());
+            Priority priority = data.get(i);
+            vh.tvName.setText("Name: " + priority.getName());
+            vh.tvCreatedDate.setText("Created Date: " + priority.getCreatedDate());
         }
 
         return view;
