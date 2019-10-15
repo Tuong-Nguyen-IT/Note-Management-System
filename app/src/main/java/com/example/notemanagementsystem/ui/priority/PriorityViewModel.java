@@ -4,16 +4,15 @@ import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
-import com.example.notemanagementsystem.database.DatabasePriority;
+import com.example.notemanagementsystem.database.DatabaseHandler;
 import com.example.notemanagementsystem.model.Priority;
 
 import java.util.ArrayList;
 
 public class PriorityViewModel extends AndroidViewModel {
     // TODO: Implement the ViewModel
-    private DatabasePriority database;
+    private DatabaseHandler database;
     private MutableLiveData<ArrayList<Priority>> priorities;
 
     public PriorityViewModel(Application application) {
@@ -21,7 +20,7 @@ public class PriorityViewModel extends AndroidViewModel {
 
         priorities = new MutableLiveData<ArrayList<Priority>>();
 
-        database = new DatabasePriority(application);
+        database = new DatabaseHandler(application);
         priorities.setValue(getAllPriorities());
     }
     public MutableLiveData<ArrayList<Priority>> getPriorities() {

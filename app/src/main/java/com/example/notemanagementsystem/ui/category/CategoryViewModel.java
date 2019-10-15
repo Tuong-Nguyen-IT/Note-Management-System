@@ -5,14 +5,14 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.notemanagementsystem.database.DatabaseCategory;
+import com.example.notemanagementsystem.database.DatabaseHandler;
 import com.example.notemanagementsystem.model.Category;
 
 import java.util.ArrayList;
 
 public class CategoryViewModel extends AndroidViewModel {
     // TODO: Implement the ViewModel
-    private DatabaseCategory database;
+    private DatabaseHandler database;
     private MutableLiveData<ArrayList<Category>> categories;
 
     public CategoryViewModel(Application application) {
@@ -20,7 +20,7 @@ public class CategoryViewModel extends AndroidViewModel {
 
         categories = new MutableLiveData<ArrayList<Category>>();
 
-        database = new DatabaseCategory(application);
+        database = new DatabaseHandler(application);
         categories.setValue(getAllCategories());
     }
     public MutableLiveData<ArrayList<Category>> getCategories() {
