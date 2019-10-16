@@ -1102,8 +1102,6 @@ id btnChange
 id btnExit
 id btnHome
 id btnSignIn
-id btnThoatStatus
-id btnaddStatus
 id btnsi
 id btnsu
 id buttonPanel
@@ -1276,6 +1274,7 @@ id src_in
 id src_over
 id standard
 id start
+id statusName
 id status_bar_latest_event_content
 id stretch
 id submenuarrow
@@ -1313,6 +1312,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id tvCreatedDate
 id tvName
+id tvTitle
 id tv_cate
 id tv_status_date
 id tv_status_name

@@ -3,10 +3,16 @@ package com.example.notemanagementsystem.model;
 public class Status {
     private String name;
     private String date;
-    public void Status(String name, String date){
+    public Status(String name, String date){
         this.name = name;
         this.date = date;
     }
+    public Status() {
+    }
+    public Status(String name) {
+        this.name = name;
+    }
+
     public void setName(String name){
         this.name = name;
     }

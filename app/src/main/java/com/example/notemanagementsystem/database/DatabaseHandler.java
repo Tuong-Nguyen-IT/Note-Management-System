@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.example.notemanagementsystem.model.Category;
 import com.example.notemanagementsystem.model.Priority;
+import com.example.notemanagementsystem.model.Status;
 
 import java.util.ArrayList;
 
@@ -20,6 +21,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String AUTOINCREMENT = "autoincrement";
     private static final String PRIMARY_KEY = "primary key";
     private static final String ID = "id";
+
     private static final String PRIORITY_TBL = "priority";
     private static final String PRIORITY_ID = "priority_ID";
     private static final String PRIORITY_NAME = "priority_name";
@@ -30,8 +32,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String CATEGORY_CREATED_DATE = "category_createdDate";
     private static final String TABLE_NAME = "student";
 
+    //status
+    private static final String TABLE_STATUS = "tbl_status";
+
+    private static final String STATUS_NAME = "status_name";
+    private static final String STATUS_DATE = "status_date";
+
     public DatabaseHandler(@Nullable Context context) {
-        super(context, "Login.db", null,1);
+        super(context, DATABASE_NAME, null,1);
         //super(context, DATABASE_NAME, null, 1);
     //this.context =   context;
     }
@@ -45,6 +53,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             Log.d("DatabaseHandler.onCreate", ex.getMessage());
         }
 
+        try {
+            db.execSQL(create_tbl_status());
+        } catch (Exception ex) {
+            Log.d("DatabaseHandler.onCreate", ex.getMessage());
+        }
 
     }
 
@@ -311,4 +324,110 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
         return ret;
     }
+
+    //status's menthod
+    public String create_tbl_status(){
+        /*String sql = "CREATE TABLE " + TABLE_STATUS + " (" +
+                ID + " integer " + PRIMARY_KEY + ' ' + AUTOINCREMENT + ", " +
+                STATUS_NAME + " text" + STATUS_DATE + "text" + STATUS_DATE + "date DEFAULT (datetime('now','localtime')))"+
+                ")";
+        db.execSQL(sql);*/
+        StringBuffer sb = new StringBuffer();
+
+        sb.append("create table ").append(TABLE_STATUS);
+        sb.append("(").append(STATUS_NAME).append(" text(50) primary key, ");
+        sb.append(STATUS_DATE).append(" date DEFAULT (datetime('now','localtime')))");
+
+        Log.d("Database.createCategoryTable", sb.toString());
+        return sb.toString();
+    }
+    public long addStatus(Status status){
+        SQLiteDatabase db = this.getWritableDatabase();
+        long ret = 0;
+
+        try {
+            ContentValues cv = new ContentValues();
+            cv.put(STATUS_NAME, status.getName());
+
+            ret = db.insertOrThrow(TABLE_STATUS, null, cv);
+        } catch (Exception ex) {
+            Log.d("Database.insertCategory", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+        return ret;
+    }
+    public ArrayList<Status> getAllStatus() {
+        ArrayList<Status> data = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        try {
+            cursor = db.query(TABLE_STATUS, null, null, null, null, null, null);
+            String name, createDate;
+
+            while (cursor.moveToNext()) {
+                name = cursor.getString(cursor.getColumnIndex(STATUS_NAME));
+                createDate = cursor.getString(cursor.getColumnIndex(STATUS_DATE));
+                data.add(new Status(name, createDate));
+            }
+        } catch (Exception ex) {
+            Log.d("Database.getAllCategory", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return data;
+    }
+    public int updateStatusName(String key, Status status) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        int ret = 0;
+        try {
+            cv.put(STATUS_NAME, status.getName());
+
+            String whereClause = STATUS_NAME + " = ?";
+            String whereArgs[] = {key};
+            ret = db.update(TABLE_STATUS, cv, whereClause, whereArgs);
+        } catch (Exception ex) {
+            Log.d("Database.updateStatusName", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+        return ret;
+    }
+
+    /**
+     * Delete category
+     *
+     * @param key
+     * @return Nunber of records
+     */
+    public int deleteStatus(String key) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String whereClause = STATUS_NAME + " = ?";
+        String whereArgs[] = {key};
+
+        int ret = 0;
+        try {
+            ret = db.delete(TABLE_STATUS, whereClause, whereArgs);
+        } catch (Exception ex) {
+            Log.d("Database.deleteCatetory", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+        return ret;
+    }
+    //end status menthod
 }

@@ -16,9 +16,11 @@ import java.util.ArrayList;
 public class StatusAdapter extends BaseAdapter {
     ArrayList<Status> data;
     Activity activity;
+    int layout;
 
-    public StatusAdapter(Activity activity, ArrayList<Status> data){
+    public StatusAdapter(Activity activity, int layout, ArrayList<Status> data) {
         this.activity = activity;
+        this.layout = layout;
         this.data = data;
     }
     @Override

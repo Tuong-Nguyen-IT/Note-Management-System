@@ -1,41 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_cate"
-        android:layout_width="600dp"
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Status from" />
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    />
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Category Form"
+        android:textStyle="bold" />
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/statusName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/btnaddStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/add"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/btnThoatStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/close"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+</RelativeLayout>
