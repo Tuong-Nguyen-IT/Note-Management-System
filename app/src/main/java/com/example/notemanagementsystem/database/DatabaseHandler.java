@@ -39,9 +39,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String STATUS_DATE = "status_date";
 
     public DatabaseHandler(@Nullable Context context) {
-        super(context, DATABASE_NAME, null,1);
-        //super(context, DATABASE_NAME, null, 1);
-    //this.context =   context;
+        super(context, DATABASE_NAME, null, 1);
+        this.context =   context;
     }
 
 
@@ -58,7 +57,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         } catch (Exception ex) {
             Log.d("DatabaseHandler.onCreate", ex.getMessage());
         }
-
+        db.execSQL("Create table accout(email text primary key ,password text)");
     }
 
     private String createTable() {
@@ -89,10 +88,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // dont't care
-        db.execSQL("drop table if exists accout");
     }
-    //inserting in database
-    public boolean insert(String email, String password){
+    //insertSignUp in database
+    public boolean insertSignUp(String email, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email",email);
