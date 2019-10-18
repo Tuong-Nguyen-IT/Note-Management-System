@@ -48,7 +48,8 @@ public class HomeFragment extends Fragment {
         dataStatus = homeViewModel.getStatusArray();
         int dem=0;
         while (dem < dataStatus.size()){
-            pieList.add(new SliceValue(50,color(dem)).setLabel(dataStatus.get(dem).getName()));
+
+            pieList.add(new SliceValue(50,color(dem)).setLabel(dataStatus.get(dem).getName()+" ? %"));
             dem++;
         }
         PieChartData pieData = new PieChartData(pieList);

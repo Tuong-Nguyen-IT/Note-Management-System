@@ -140,19 +140,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Log.d("DB.create_TBL_Priority", sb.toString());
         return sb.toString();
     }
-    //status's menthod
-    public String create_tbl_status(){
-        StringBuffer sb = new StringBuffer();
 
-        sb.append("create table ").append(TABLE_STATUS);
-        sb.append(" (").append(PRIORITY_ID).append(" integer ").append(PRIMARY_KEY);
-        sb.append(" ").append(AUTOINCREMENT).append(", ");
-        sb.append(STATUS_NAME).append(" text(50), ");
-        sb.append(STATUS_DATE).append(" date DEFAULT (datetime('now','localtime')))");
 
-        Log.d("DB.createStatusTable", sb.toString());
-        return sb.toString();
-    }
     //note table
     public String CreateNoteTable(){
         StringBuffer sb = new StringBuffer();
@@ -385,7 +374,19 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return ret;
     }
 
+//status's menthod----------------------------------------------------------------------------------------------------------------------------------------
+    public String create_tbl_status(){
+        StringBuffer sb = new StringBuffer();
 
+        sb.append("create table ").append(TABLE_STATUS);
+        sb.append(" (").append(ID).append(" integer ").append(PRIMARY_KEY);
+        sb.append(" ").append(AUTOINCREMENT).append(", ");
+        sb.append(STATUS_NAME).append(" text(50), ");
+        sb.append(STATUS_DATE).append(" date DEFAULT (datetime('now','localtime')))");
+
+        Log.d("DB.createStatusTable", sb.toString());
+        return sb.toString();
+    }
     public long addStatus(Status status){
         SQLiteDatabase db = this.getWritableDatabase();
         long ret = 0;
@@ -468,7 +469,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
         return ret;
     }
-
+//end status menthod---------------------------------------------------------------------------------------
     public long insertNote(Note note) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = 0;
