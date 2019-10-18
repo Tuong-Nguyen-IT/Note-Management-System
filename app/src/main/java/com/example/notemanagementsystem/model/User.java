@@ -1,13 +1,13 @@
 package com.example.notemanagementsystem.model;
 
 public class User {
-    private String ID;
+    private int ID;
     private String firstName;
     private String lastName;
     private String email;
     private String pwd;
 
-    public User(String ID, String firstName, String lastName, String email, String pwd) {
+    public User(int ID, String firstName, String lastName, String email, String pwd) {
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -25,11 +25,11 @@ public class User {
     public User() {
     }
 
-    public String getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 

@@ -21,6 +21,7 @@ import java.util.ArrayList;
 public class DatabaseHandler extends SQLiteOpenHelper {
 
     Context context;
+    private static final String TAG = "DB_ERROR";
     private static final String DATABASE_NAME = "note_ms_db";
     private static final String AUTOINCREMENT = "autoincrement";
     private static final String PRIMARY_KEY = "primary key";
@@ -55,12 +56,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
     //SignUp
-    private static final String TABLE_USER = "user";
-
-    private static final String COLUMN_USER_ID = "user_id";
-    private static final String COLUMN_USER_EMAIL = "user_email";
-    private static final String COLUMN_USER_PASSWORD = "user_password";
-    private static final String COLUMN_USER_ACTIVE = "user_active";
+    private static final String TABLE_USER = "tbl_user";
+    private static final String FIRST_NAME = "first_name";
+    private static final String LAST_NAME = "last_name";
+    private static final String EMAIL = "user_email";
+    private static final String PASSWORD = "user_password";
+    private static final String ACTIVE = "user_active";
     public DatabaseHandler(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 3);
         //this.context =   context;
@@ -88,11 +89,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         db.execSQL(CreateNoteTable());
 
-        // db.execSQL("Create table note(note_name text(50) primary key ,note_createdDate date DEFAULT (datime('now','localtime')))");
-        db.execSQL("Create table accout(email text primary key ,password text)");
-
-        //db.execSQL("Create table accout(email text primary key ,password text)");
-        db.execSQL(createTableUser);
+        /////
+        createTableUser(db);
 
     }
 
@@ -631,73 +629,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
 
-//end note menthod=====================================================================================================================
-
-
-    public int createTableUser(){
-        //id
-        //email
-        //password
-        //active
-        return 0;
-    }
-    private String createTableUser = "CREATE TABLE " + TABLE_USER + "("
-            + COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_USER_EMAIL + " TEXT,"
-            + COLUMN_USER_PASSWORD + " TEXT," + COLUMN_USER_ACTIVE + " TEXT" + ")";
-
-    public int addUser(User user){
-        // add new user
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_USER_EMAIL, user.getEmail());
-        values.put(COLUMN_USER_PASSWORD, user.getPwd());
-
-        db.insert(TABLE_USER, null, values);
-        db.close();
-        return 1;
-    }
-
-    //public ArrayList<User> getUserFromEmail(String email){
-        //ArrayList listUser;
-        // get user where email = email
-       // String[] columns = {
-                //COLUMN_USER_ID,
-              //  COLUMN_USER_EMAIL,
-            //    COLUMN_USER_PASSWORD,
-          //      COLUMN_USER_ACTIVE
-        //};
-      //  return listUser;
-    //}
-    public boolean checkUser(String email) {
-
-        String[] columns = {
-                COLUMN_USER_ID
-        };
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        String selection = COLUMN_USER_EMAIL + " = ?";
-
-        String[] selectionArgs = {email};
-
-        Cursor cursor = db.query(TABLE_USER,
-                columns,
-                selection,
-                selectionArgs,
-                null,
-                null,
-                null);
-        int cursorCount = cursor.getCount();
-        cursor.close();
-        db.close();
-
-        if (cursorCount > 0) {
-            return true;
-        }
-
-        return false;
-    }
-
+//end note menthod===========================================================================================================================
     public float countStatus(String nameStatus){
         int dem=0;
         //String test="";
@@ -750,5 +682,167 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
         return dem;
     }
+    //User ============================================================================================================
+    public void createTableUser(SQLiteDatabase db) {
+        String sql = "CREATE TABLE " + TABLE_USER + " ( " +
+                ID + " INTEGER " + PRIMARY_KEY + " " + AUTOINCREMENT + ", " +
+                FIRST_NAME + " TEXT, " +
+                LAST_NAME + " TEXT,  " +
+                EMAIL + " TEXT, " +
+                PASSWORD + " TEXT, " +
+                ACTIVE + " integer default 0, " +
+                "UNIQUE(" + EMAIL + "));";
+        try {
+            db.execSQL(sql);
+        } catch (Exception e) {
+            db.close();
+            Log.e(TAG, "createTableUser: " + e.getMessage());
+        }
+    }
+
+    public long addUser(User user) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        if (user != null) {
+            cv.put(EMAIL, user.getEmail());
+            cv.put(PASSWORD, user.getPwd());
+            try {
+                return db.insert(TABLE_USER, null, cv);
+            } catch (Exception e) {
+                Log.e(TAG, "addUser: " + e.getMessage());
+            }
+        }
+        db.close();
+        return -1;
+    }
+
+    public User getUserFromEmail(String userEmail) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String colunms[] = {ID, FIRST_NAME, LAST_NAME, EMAIL, PASSWORD};
+        String selections = EMAIL + "= ?";
+        String selectionArgs[] = {userEmail};
+        Cursor cursor;
+        cursor = db.query(TABLE_USER, colunms, selections, selectionArgs, null, null, null);
+        cursor.moveToNext();
+        if (cursor.moveToNext()) {
+            int ID = cursor.getInt(0);
+            String firstName = cursor.getString(1);
+            String lastName = cursor.getString(2);
+            String email = cursor.getString(3);
+            String password = cursor.getString(4);
+            User user = new User(ID, firstName, lastName, email, password);
+            return user;
+        }
+        db.close();
+        return null;
+    }
+
+    public User getActiveUser() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String colunms[] = {ID, FIRST_NAME, LAST_NAME, EMAIL, PASSWORD};
+        String selections = ACTIVE + " = ?";
+        String selectionArgs[] = {String.valueOf(1)};
+        Cursor cursor;
+        cursor = db.query(TABLE_USER, colunms, selections, selectionArgs, null, null, null);
+        if (cursor.moveToNext()) {
+            int ID = cursor.getInt(0);
+            String firstName = cursor.getString(1);
+            String lastName = cursor.getString(2);
+            String email = cursor.getString(3);
+            String password = cursor.getString(4);
+            User user = new User(ID, firstName, lastName, email, password);
+            return user;
+        }
+        db.close();
+        return null;
+    }
+
+    public User getUser(String userEmail, String userPassword) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String colunms[] = {ID, FIRST_NAME, LAST_NAME, EMAIL, PASSWORD};
+        String selections = EMAIL + "= ? and " + PASSWORD + " = ?";
+        String selectionArgs[] = {userEmail, userPassword};
+        Cursor cursor;
+        cursor = db.query(TABLE_USER, colunms, selections, selectionArgs, null, null, null);
+
+        if (cursor.moveToNext()) {
+            int ID = cursor.getInt(0);
+            String firstName = cursor.getString(1);
+            String lastName = cursor.getString(2);
+            String email = cursor.getString(3);
+            String password = cursor.getString(4);
+            User user = new User(ID, firstName, lastName, email, password);
+            return user;
+        }
+        db.close();
+        return null;
+    }
+
+
+    public int setSateActive(User user) {
+        ContentValues values = new ContentValues();
+        SQLiteDatabase db = this.getWritableDatabase();
+        values.put(ACTIVE, 1);
+        String whereClause = EMAIL + "= ?";
+        String whereArgs[] = {user.getEmail()};
+        try {
+            return db.update(TABLE_USER, values, whereClause, whereArgs);
+        } catch (Exception e) {
+            Log.e(TAG, "setSateActive: " + e.getMessage());
+            db.close();
+            return 0;
+        }
+    }
+
+    public int resetActive() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(ACTIVE, 0);
+        try {
+            return db.update(TABLE_USER, values, null, null);
+        } catch (Exception e) {
+            Log.e(TAG, "resetActive: " + e.getMessage());
+            db.close();
+            return 0;
+        }
+    }
+
+    public int updateProfile(User user) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FIRST_NAME, user.getFirstName());
+        values.put(LAST_NAME, user.getLastName());
+        values.put(EMAIL, user.getEmail());
+        String whereClause = "ID = ?";
+        String whereArgs[] = {user.getID() + ""};
+        try {
+            return db.update(TABLE_USER, values, whereClause, whereArgs);
+        } catch (Exception e) {
+            return 0;
+        }
+
+    }
+
+    public int changePassword(User user) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(PASSWORD, user.getPwd());
+        String whereClause = "ID = ?";
+        String whereArgs[] = {user.getID() + ""};
+        try {
+            return db.update(TABLE_USER, contentValues, whereClause, whereArgs);
+        } catch (Exception e) {
+            Log.e(TAG, "changePassword: " + e.getMessage());
+            db.close();
+            return 0;
+        }
+    }
+
+
+//
+//    public int addUser(User user){
+//
+//    }
+
 
 }
