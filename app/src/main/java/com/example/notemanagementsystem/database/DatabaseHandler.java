@@ -1,5 +1,6 @@
 package com.example.notemanagementsystem.database;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -10,12 +11,14 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import com.example.notemanagementsystem.model.Category;
+import com.example.notemanagementsystem.model.Note;
 import com.example.notemanagementsystem.model.Priority;
 import com.example.notemanagementsystem.model.Status;
 
 import java.util.ArrayList;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
+
     Context context;
     private static final String DATABASE_NAME = "note_ms_db";
     private static final String AUTOINCREMENT = "autoincrement";
@@ -34,13 +37,22 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     //status
     private static final String TABLE_STATUS = "tbl_status";
-
     private static final String STATUS_NAME = "status_name";
     private static final String STATUS_DATE = "status_date";
 
+    //note
+    private static final String NOTE_TBL = "note_tbl";
+    private static final String NOTE_ID = "note_ID";
+    private static final String NOTE_NAME = "note_name";
+    private static final String NOTE_STATUS_NAME = "note_status_name";
+    private static final String NOTE_PRIORITY_NAME= "note_priority_name";
+    private static final String NOTE_CATEGORY_NAME= "note_category_name";
+    private static final String NOTE_CREATED_DATE = "note_createdDate";
+    private static final String NOTE_PLAN_DATE = "note_planDate";
+
     public DatabaseHandler(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, 1);
-        this.context =   context;
+        super(context, DATABASE_NAME, null, 3);
+        //this.context =   context;
     }
 
 
@@ -53,21 +65,27 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
 
         try {
+            //db.execSQL(CreateNoteTable());
             db.execSQL(create_tbl_status());
+
         } catch (Exception ex) {
             Log.d("DatabaseHandler.onCreate", ex.getMessage());
         }
+        db.execSQL(CreateNoteTable());
+
+       // db.execSQL("Create table note(note_name text(50) primary key ,note_createdDate date DEFAULT (datime('now','localtime')))");
         db.execSQL("Create table accout(email text primary key ,password text)");
     }
 
     private String createTable() {
         StringBuffer sb = new StringBuffer();
-
+        //category
         sb.append("create table ").append(CATEGORY_TBL);
         sb.append("(").append(CATEGORY_ID).append(" integer ").append(PRIMARY_KEY);
         sb.append(AUTOINCREMENT).append(", ");
         sb.append(CATEGORY_NAME).append(" text(50), ");
         sb.append(CATEGORY_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime')))");
+        //priority
         sb.append("create table ").append(PRIORITY_TBL);
         sb.append("(").append(PRIORITY_ID).append(" integer ").append(PRIMARY_KEY);
         sb.append(AUTOINCREMENT).append(", ");
@@ -428,4 +446,153 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return ret;
     }
     //end status menthod
+
+
+    //note method
+
+     //sb.append("create table ").append(NOTE_TBL);
+       // sb.append("(").append(NOTE_ID).append(" integer ").append(PRIMARY_KEY);
+        //sb.append(AUTOINCREMENT).append(", ");
+       // sb.append(NOTE_NAME).append(" text(50), ");
+    //sb.append(NOTE_CATEGORY_NAME).append(" text(50), ");
+    //sb.append(NOTE_PRIORITY_NAME).append(" text(50), ");
+    //sb.append(NOTE_STATUS_NAME).append(" text(50), ");
+    //sb.append(NOTE_PLAN_DATE).append(" text(50), ");
+        //sb.append(NOTE_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime')))");
+
+    public String CreateNoteTable(){
+        StringBuffer sb = new StringBuffer();
+        sb.append("create table ").append(NOTE_TBL);
+        //ID
+        sb.append("(").append(NOTE_NAME).append(" text(50) primary key, ");
+
+        sb.append(NOTE_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime')));");
+
+
+        Log.d("Database.createCategoryTable", sb.toString());
+        return sb.toString();
+
+    }
+
+
+
+    public long insertNote(Note note) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = 0;
+
+        try {
+            ContentValues cv = new ContentValues();
+            cv.put(NOTE_NAME, note.getName());
+
+            result = db.insertOrThrow(NOTE_TBL, null, cv);
+        } catch (Exception ex) {
+            Log.d("DatabaseHandler.insertNote", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+        return result;
+    }
+
+    public ArrayList<Note> getAllNote() {
+        ArrayList<Note> data = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        try {
+            cursor = db.query(NOTE_TBL, null, null, null, null, null, null);
+            String name, createDate;
+
+            while (cursor.moveToNext()) {
+                name = cursor.getString(cursor.getColumnIndex(NOTE_NAME));
+                createDate = cursor.getString(cursor.getColumnIndex(NOTE_CREATED_DATE));
+                data.add(new Note(name, createDate));
+            }
+        } catch (Exception ex) {
+            Log.d("DatabaseNote.getAllNote", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return data;
+    }
+
+    @SuppressLint("LongLogTag")
+    public ArrayList<String> getAllNoteName() {
+        ArrayList<String> data = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        try {
+            cursor = db.query(NOTE_TBL, null, null, null, null, null, null);
+            String name;
+
+            while (cursor.moveToNext()) {
+                name = cursor.getString(cursor.getColumnIndex(NOTE_NAME));
+                data.add(name);
+            }
+
+        } catch (Exception ex) {
+            Log.d("DatabaseNote.getAllNoteName", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return data;
+    }
+
+    //@SuppressLint("LongLogTag")
+    public int updateNoteName(String key, Note note) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        int ret = 0;
+        try {
+            cv.put(NOTE_NAME, note.getName());
+
+            String whereClause =  NOTE_NAME+ " = ?";
+            String whereArgs[] = {key};
+            ret = db.update(NOTE_TBL, cv, whereClause, whereArgs);
+        } catch (Exception ex) {
+            Log.d("DatabaseNote.updateNoteName", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+        return ret;
+    }
+
+    public int deleteNote(String key) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String whereClause = NOTE_NAME + " = ?";
+        String whereArgs[] = {key};
+
+        int ret = 0;
+        try {
+            ret = db.delete(NOTE_TBL, whereClause, whereArgs);
+        } catch (Exception ex) {
+            Log.d("Database.deleteNote", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+        return ret;
+    }
+
+
+
+
+    //end note method
+
 }

@@ -1,7 +1,7 @@
-#Wed Oct 16 11:33:01 ICT 2019
-base.0=D\:\\DH-N3\\ChuyenDeXayDungUngDungTrenThietBiDiDong\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+#Fri Oct 18 09:04:11 ICT 2019
+base.0=D\:\\mobile\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=D\:\\DH-N3\\ChuyenDeXayDungUngDungTrenThietBiDiDong\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.1=D\:\\mobile\\Note-Management-System\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

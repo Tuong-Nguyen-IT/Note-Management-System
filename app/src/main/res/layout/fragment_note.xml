@@ -10,6 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="670dp">
 
+        <ListView
+            android:id="@+id/lvNote"
+            android:layout_width="409dp"
+            android:layout_height="668dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
