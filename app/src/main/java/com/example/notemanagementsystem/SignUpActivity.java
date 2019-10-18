@@ -36,9 +36,9 @@ public class SignUpActivity extends AppCompatActivity {
                 }
                 else{
                     if(Password.equals(Repassword)){
-                        Boolean chkemail = db.chkemail(Email);
+                        Boolean chkemail = db.checkUser(Email);
                         if(chkemail==true){
-                            Boolean insert = db.insertSignUp(Email,Password);
+                            Boolean insert = db.addUser();
                             if(insert==true){
                                 Toast.makeText(getApplicationContext(),"Registered Successfully",Toast.LENGTH_SHORT).show();
                             }
