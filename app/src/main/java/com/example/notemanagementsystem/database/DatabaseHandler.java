@@ -25,11 +25,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String AUTOINCREMENT = "autoincrement";
     private static final String PRIMARY_KEY = "primary key";
     private static final String ID = "id";
-
+    //priority
     private static final String PRIORITY_TBL = "priority";
     private static final String PRIORITY_ID = "priority_ID";
     private static final String PRIORITY_NAME = "priority_name";
     private static final String PRIORITY_CREATED_DATE = "priority_createdDate";
+    //category
     private static final String CATEGORY_TBL = "category";
     private static final String CATEGORY_ID = "cateID";
     private static final String CATEGORY_NAME = "category_name";
@@ -69,22 +70,25 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         try {
-            db.execSQL(createTable());
+            db.execSQL(create_TBL_Category());
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.onCreate", ex.getMessage());
+            Log.d("DB.onCreate", ex.getMessage());
         }
-
         try {
-            //db.execSQL(CreateNoteTable());
+            db.execSQL(create_TBL_Priority());
+        } catch (Exception ex) {
+            Log.d("DB.onCreate", ex.getMessage());
+        }
+        try {
             db.execSQL(create_tbl_status());
 
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.onCreate", ex.getMessage());
+            Log.d("DB.onCreate", ex.getMessage());
         }
 
         db.execSQL(CreateNoteTable());
 
-       // db.execSQL("Create table note(note_name text(50) primary key ,note_createdDate date DEFAULT (datime('now','localtime')))");
+        // db.execSQL("Create table note(note_name text(50) primary key ,note_createdDate date DEFAULT (datime('now','localtime')))");
         db.execSQL("Create table accout(email text primary key ,password text)");
 
         //db.execSQL("Create table accout(email text primary key ,password text)");
@@ -92,33 +96,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     }
 
-    private String createTable() {
-        StringBuffer sb = new StringBuffer();
-        //category
-        sb.append("create table ").append(CATEGORY_TBL);
-        sb.append("(").append(CATEGORY_ID).append(" integer ").append(PRIMARY_KEY);
-        sb.append(AUTOINCREMENT).append(", ");
-        sb.append(CATEGORY_NAME).append(" text(50), ");
-        sb.append(CATEGORY_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime')))");
-        //priority
-        sb.append("create table ").append(PRIORITY_TBL);
-        sb.append("(").append(PRIORITY_ID).append(" integer ").append(PRIMARY_KEY);
-        sb.append(AUTOINCREMENT).append(", ");
-        sb.append(PRIORITY_NAME).append(" text(50), ");
-        sb.append(PRIORITY_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime')))");
-
-        Log.d("DatabaseHandler.createTable", sb.toString());
-        return sb.toString();
-    }
-    public void addCategory(Category category) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(CATEGORY_NAME, category.getName());
-        db.insert(CATEGORY_TBL, null, values);
-        db.close();
-    }
-
     @Override
+
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // dont't care
     }
@@ -139,6 +118,56 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if(cursor.getCount()>0) return false;
         else return true;
     }*/
+    public String create_TBL_Category() {
+        StringBuffer sb = new StringBuffer();
+        //category
+        sb.append("create table ").append(CATEGORY_TBL);
+        sb.append(" (").append(CATEGORY_ID).append(" integer ").append(PRIMARY_KEY);
+        sb.append(" ").append(AUTOINCREMENT).append(", ");
+        sb.append(CATEGORY_NAME).append(" text(50), ");
+        sb.append(CATEGORY_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime'))) ");
+        Log.d("DB.create_TBL_Category", sb.toString());
+        return sb.toString();
+    }
+    public String create_TBL_Priority(){
+        StringBuffer sb = new StringBuffer();
+        //priority
+        sb.append("create table ").append(PRIORITY_TBL);
+        sb.append(" (").append(PRIORITY_ID).append(" integer ").append(PRIMARY_KEY);
+        sb.append(" ").append(AUTOINCREMENT).append(", ");
+        sb.append(PRIORITY_NAME).append(" text(50), ");
+        sb.append(PRIORITY_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime'))) ");
+        Log.d("DB.create_TBL_Priority", sb.toString());
+        return sb.toString();
+    }
+    //status's menthod
+    public String create_tbl_status(){
+        StringBuffer sb = new StringBuffer();
+
+        sb.append("create table ").append(TABLE_STATUS);
+        sb.append(" (").append(PRIORITY_ID).append(" integer ").append(PRIMARY_KEY);
+        sb.append(" ").append(AUTOINCREMENT).append(", ");
+        sb.append(STATUS_NAME).append(" text(50), ");
+        sb.append(STATUS_DATE).append(" date DEFAULT (datetime('now','localtime')))");
+
+        Log.d("DB.createStatusTable", sb.toString());
+        return sb.toString();
+    }
+    //note table
+    public String CreateNoteTable(){
+        StringBuffer sb = new StringBuffer();
+        sb.append("create table ").append(NOTE_TBL);
+        //ID
+        sb.append(" (").append(NOTE_ID).append(" integer ").append(PRIMARY_KEY);
+        sb.append(" ").append(AUTOINCREMENT).append(", ");
+        sb.append(NOTE_NAME).append(" text(50), ");
+        sb.append(NOTE_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime')));");
+
+
+        Log.d("DB.createCategoryTable", sb.toString());
+        return sb.toString();
+
+    }
     public long insertPriority(Priority priority) {
         SQLiteDatabase db = this.getWritableDatabase();
         long ret = 0;
@@ -148,7 +177,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
             ret = db.insertOrThrow(PRIORITY_TBL, null, cv);
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.insertPriority", ex.getMessage());
+            Log.d("DB.insertPriority", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -171,7 +200,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 data.add(new Priority(name, createDate));
             }
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.getAllPriority", ex.getMessage());
+            Log.d("DB.getAllPriority", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -197,7 +226,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             }
 
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.getAllPriorityName", ex.getMessage());
+            Log.d("DB.getAllPriorityName", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -219,7 +248,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             String whereArgs[] = {key};
             ret = db.update(PRIORITY_TBL, cv, whereClause, whereArgs);
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.updatePriorityName", ex.getMessage());
+            Log.d("DB.updatePriorityName", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -239,7 +268,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         try {
             ret = db.delete(PRIORITY_TBL, whereClause, whereArgs);
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.deletePriority", ex.getMessage());
+            Log.d("DB.deletePriority", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -258,7 +287,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
             ret = db.insertOrThrow(CATEGORY_TBL, null, cv);
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.insertCategory", ex.getMessage());
+            Log.d("DB.insertCategory", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -281,7 +310,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 data.add(new Category(name, createDate));
             }
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.getAllCategory", ex.getMessage());
+            Log.d("DB.getAllCategory", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -307,7 +336,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             }
 
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.getAllCategoryName", ex.getMessage());
+            Log.d("DB.getAllCategoryName", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -329,7 +358,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             String whereArgs[] = {key};
             ret = db.update(CATEGORY_TBL, cv, whereClause, whereArgs);
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.updateCategoryName", ex.getMessage());
+            Log.d("DB.updateCategoryName", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -347,7 +376,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         try {
             ret = db.delete(CATEGORY_TBL, whereClause, whereArgs);
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.deleteCatetory", ex.getMessage());
+            Log.d("DB.deleteCatetory", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -356,22 +385,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return ret;
     }
 
-    //status's menthod
-    public String create_tbl_status(){
-        /*String sql = "CREATE TABLE " + TABLE_STATUS + " (" +
-                ID + " integer " + PRIMARY_KEY + ' ' + AUTOINCREMENT + ", " +
-                STATUS_NAME + " text" + STATUS_DATE + "text" + STATUS_DATE + "date DEFAULT (datetime('now','localtime')))"+
-                ")";
-        db.execSQL(sql);*/
-        StringBuffer sb = new StringBuffer();
 
-        sb.append("create table ").append(TABLE_STATUS);
-        sb.append("(").append(STATUS_NAME).append(" text(50) primary key, ");
-        sb.append(STATUS_DATE).append(" date DEFAULT (datetime('now','localtime')))");
-
-        Log.d("Database.createCategoryTable", sb.toString());
-        return sb.toString();
-    }
     public long addStatus(Status status){
         SQLiteDatabase db = this.getWritableDatabase();
         long ret = 0;
@@ -382,7 +396,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
             ret = db.insertOrThrow(TABLE_STATUS, null, cv);
         } catch (Exception ex) {
-            Log.d("Database.insertCategory", ex.getMessage());
+            Log.d("Database.insertStatus", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -427,7 +441,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             String whereArgs[] = {key};
             ret = db.update(TABLE_STATUS, cv, whereClause, whereArgs);
         } catch (Exception ex) {
-            Log.d("Database.updateStatusName", ex.getMessage());
+            Log.d("DB.updateStatusName", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -436,12 +450,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return ret;
     }
 
-    /**
-     * Delete category
-     *
-     * @param key
-     * @return Nunber of records
-     */
     public int deleteStatus(String key) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -460,37 +468,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
         return ret;
     }
-    //end status menthod
-
-
-
-    //note method
-
-     //sb.append("create table ").append(NOTE_TBL);
-       // sb.append("(").append(NOTE_ID).append(" integer ").append(PRIMARY_KEY);
-        //sb.append(AUTOINCREMENT).append(", ");
-       // sb.append(NOTE_NAME).append(" text(50), ");
-    //sb.append(NOTE_CATEGORY_NAME).append(" text(50), ");
-    //sb.append(NOTE_PRIORITY_NAME).append(" text(50), ");
-    //sb.append(NOTE_STATUS_NAME).append(" text(50), ");
-    //sb.append(NOTE_PLAN_DATE).append(" text(50), ");
-        //sb.append(NOTE_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime')))");
-
-    public String CreateNoteTable(){
-        StringBuffer sb = new StringBuffer();
-        sb.append("create table ").append(NOTE_TBL);
-        //ID
-        sb.append("(").append(NOTE_NAME).append(" text(50) primary key, ");
-
-        sb.append(NOTE_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime')));");
-
-
-        Log.d("Database.createCategoryTable", sb.toString());
-        return sb.toString();
-
-    }
-
-
 
     public long insertNote(Note note) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -502,7 +479,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
             result = db.insertOrThrow(NOTE_TBL, null, cv);
         } catch (Exception ex) {
-            Log.d("DatabaseHandler.insertNote", ex.getMessage());
+            Log.d("DB.insertNote", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();
@@ -578,7 +555,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             String whereArgs[] = {key};
             ret = db.update(NOTE_TBL, cv, whereClause, whereArgs);
         } catch (Exception ex) {
-            Log.d("DatabaseNote.updateNoteName", ex.getMessage());
+            Log.d("DB.updateNoteName", ex.getMessage());
         } finally {
             if (db != null) {
                 db.close();

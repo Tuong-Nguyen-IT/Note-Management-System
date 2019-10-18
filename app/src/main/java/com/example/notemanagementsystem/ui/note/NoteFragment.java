@@ -167,8 +167,6 @@ public class NoteFragment extends Fragment implements DatePickerDialog.OnDateSet
                     return;
                 }
                 long ret = 0;
-                // Add new category
-                //test();
                 if (note == null) {
                     ret = noteViewModel.insertNote(new Note(name));
                    // noteViewModel.getNote().setValue(noteViewModel.getAllNote());

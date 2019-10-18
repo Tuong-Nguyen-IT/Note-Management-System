@@ -129,7 +129,7 @@ public class StatusFragment extends Fragment {
                     public void onClick(View view) {
                         String name = etName.getText().toString();
                         if (name.isEmpty()) {
-                            Toast.makeText(getActivity(), "Please enter category name", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), "Please enter status name", Toast.LENGTH_LONG).show();
                             etName.requestFocus();
                             return;
                         }
@@ -204,7 +204,7 @@ public class StatusFragment extends Fragment {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         if (statusViewModel.deleteStatus(status.getName()) > 0) {
-                            Toast.makeText(getActivity(), "Delete category successfully", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), "Delete status successfully", Toast.LENGTH_LONG).show();
                             // Refresh data
                             statusViewModel.getStatus().setValue(statusViewModel.getAllStatus());
                         }
