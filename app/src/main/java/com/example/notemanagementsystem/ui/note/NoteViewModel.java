@@ -36,6 +36,10 @@ public class NoteViewModel extends AndroidViewModel {
         return databaseNote.getAllNote();
     }
 
+    public ArrayList<String> getAllNoteName() {
+        return databaseNote.getAllNoteName();
+    }
+
     public int updateNote(String key, Note note) {
         return databaseNote.updateNoteName(key, note);
     }

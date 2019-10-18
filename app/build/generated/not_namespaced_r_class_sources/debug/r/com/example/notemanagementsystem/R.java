@@ -5467,10 +5467,10 @@ public final class R {
     public static final int textSpacerNoTitle=0x7f0800e2;
     public static final int textStart=0x7f0800e3;
     public static final int textView=0x7f0800e4;
-    public static final int textView2=0x7f0800e5;
-    public static final int textView3=0x7f0800e6;
-    public static final int textView4=0x7f0800e7;
-    public static final int textViewPlaindate=0x7f0800e8;
+    public static final int textViewCategory=0x7f0800e5;
+    public static final int textViewPlaindate=0x7f0800e6;
+    public static final int textViewPriority=0x7f0800e7;
+    public static final int textViewStatus=0x7f0800e8;
     public static final int text_input_password_toggle=0x7f0800e9;
     public static final int textinput_counter=0x7f0800ea;
     public static final int textinput_error=0x7f0800eb;

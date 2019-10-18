@@ -150,6 +150,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         sb.append(" (").append(NOTE_ID).append(" integer ").append(PRIMARY_KEY);
         sb.append(" ").append(AUTOINCREMENT).append(", ");
         sb.append(NOTE_NAME).append(" text(50), ");
+        sb.append(NOTE_CATEGORY_NAME).append(" text(50), ");
+        sb.append(NOTE_PRIORITY_NAME).append(" text(50), ");
+        sb.append(NOTE_STATUS_NAME).append(" text(50), ");
+        sb.append(NOTE_PLAN_DATE).append(" text(50), ");
         sb.append(NOTE_CREATED_DATE).append(" date DEFAULT (datetime('now','localtime')));");
 
 
@@ -431,6 +435,34 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
         return data;
     }
+
+    public ArrayList<String> getAllStatusName() {
+        ArrayList<String> data = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        try {
+            cursor = db.query(TABLE_STATUS, null, null, null, null, null, null);
+            String name;
+
+            while (cursor.moveToNext()) {
+                name = cursor.getString(cursor.getColumnIndex(STATUS_NAME));
+                data.add(name);
+            }
+
+        } catch (Exception ex) {
+            Log.d("DB.getAllCategoryName", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return data;
+    }
+
     public int updateStatusName(String key, Status status) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -470,6 +502,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return ret;
     }
 //end status menthod---------------------------------------------------------------------------------------
+//note's menthod=========================================================================================
     public long insertNote(Note note) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = 0;
@@ -477,6 +510,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         try {
             ContentValues cv = new ContentValues();
             cv.put(NOTE_NAME, note.getName());
+            cv.put(NOTE_CATEGORY_NAME, note.getCategory_name());
+            cv.put(NOTE_PRIORITY_NAME, note.getPriority_name());
+            cv.put(NOTE_STATUS_NAME, note.getStatus_name());
+            cv.put(NOTE_PLAN_DATE, note.getPlan_date());
 
             result = db.insertOrThrow(NOTE_TBL, null, cv);
         } catch (Exception ex) {
@@ -496,12 +533,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Cursor cursor = null;
         try {
             cursor = db.query(NOTE_TBL, null, null, null, null, null, null);
-            String name, createDate;
+            String name,category_name,priority_name,status_name,plan_date, createDate;
 
             while (cursor.moveToNext()) {
                 name = cursor.getString(cursor.getColumnIndex(NOTE_NAME));
                 createDate = cursor.getString(cursor.getColumnIndex(NOTE_CREATED_DATE));
-                data.add(new Note(name, createDate));
+                category_name = cursor.getString(cursor.getColumnIndex(NOTE_CATEGORY_NAME));
+                priority_name = cursor.getString(cursor.getColumnIndex(NOTE_PRIORITY_NAME));
+                status_name = cursor.getString(cursor.getColumnIndex(NOTE_STATUS_NAME));
+                plan_date = cursor.getString(cursor.getColumnIndex(NOTE_PLAN_DATE));
+                data.add(new Note(name,category_name,priority_name,status_name,plan_date, createDate));
             }
         } catch (Exception ex) {
             Log.d("DatabaseNote.getAllNote", ex.getMessage());
@@ -551,7 +592,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         int ret = 0;
         try {
             cv.put(NOTE_NAME, note.getName());
-
+            cv.put(NOTE_CATEGORY_NAME, note.getCategory_name());
+            cv.put(NOTE_PRIORITY_NAME, note.getPriority_name());
+            cv.put(NOTE_STATUS_NAME, note.getStatus_name());
+            cv.put(NOTE_PLAN_DATE, note.getPlan_date());
             String whereClause =  NOTE_NAME+ " = ?";
             String whereArgs[] = {key};
             ret = db.update(NOTE_TBL, cv, whereClause, whereArgs);
@@ -587,7 +631,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
 
-    //end note method
+//end note menthod=====================================================================================================================
 
 
     public int createTableUser(){

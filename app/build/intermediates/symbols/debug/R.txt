@@ -1289,10 +1289,10 @@ int id textSpacerNoButtons 0x7f0800e1
 int id textSpacerNoTitle 0x7f0800e2
 int id textStart 0x7f0800e3
 int id textView 0x7f0800e4
-int id textView2 0x7f0800e5
-int id textView3 0x7f0800e6
-int id textView4 0x7f0800e7
-int id textViewPlaindate 0x7f0800e8
+int id textViewCategory 0x7f0800e5
+int id textViewPlaindate 0x7f0800e6
+int id textViewPriority 0x7f0800e7
+int id textViewStatus 0x7f0800e8
 int id text_input_password_toggle 0x7f0800e9
 int id textinput_counter 0x7f0800ea
 int id textinput_error 0x7f0800eb

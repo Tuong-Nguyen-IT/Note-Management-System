@@ -48,6 +48,10 @@ public class NoteAdapter extends BaseAdapter {
             convertView = inflater.inflate(layout, null);
             vh = new ViewHolder();
             vh.tvName = convertView.findViewById(R.id.tvName);
+            vh.tvCategory = convertView.findViewById(R.id.tvCategory);
+            vh.tvPriority = convertView.findViewById(R.id.tvPriority);
+            vh.tvStatus = convertView.findViewById(R.id.tvStatus);
+            vh.tvPlandate = convertView.findViewById(R.id.tvPlaindate);
             vh.tvCreatedDate = convertView.findViewById(R.id.tvCreateddate);
             convertView.setTag(vh);
         } else {
@@ -58,6 +62,10 @@ public class NoteAdapter extends BaseAdapter {
         if (data.size() > 0) {
             Note note = data.get(position);
             vh.tvName.setText("Name: " + note.getName());
+            vh.tvCategory.setText("Category: " + note.getCategory_name());
+            vh.tvPriority.setText("Priority: " + note.getPriority_name());
+            vh.tvStatus.setText("Status: " + note.getStatus_name());
+            vh.tvPlandate.setText("Plan Date: " + note.getPlan_date());
             vh.tvCreatedDate.setText("Created Date: " + note.getCreatedDate());
         }
 
@@ -66,6 +74,10 @@ public class NoteAdapter extends BaseAdapter {
 
     private class ViewHolder {
         TextView tvName;
+        TextView tvCategory;
+        TextView tvPriority;
+        TextView tvStatus;
+        TextView tvPlandate;
         TextView tvCreatedDate;
     }
 }
