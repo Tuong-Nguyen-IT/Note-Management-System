@@ -653,4 +653,26 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return false;
     }
 
+    public int countStatus(String status){
+        int dem=0;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        try {
+            cursor = db.query(NOTE_TBL, null, null, null, null, null, null);
+            while (cursor.moveToNext()) {
+                dem = cursor.getInt(0);
+            }
+        } catch (Exception ex) {
+            Log.d("Database.getAllCategory", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return dem;
+    }
+
 }
