@@ -37,7 +37,7 @@ public class SignUpActivity extends AppCompatActivity {
                 else{
                     if(Password.equals(Repassword)){
                         Boolean chkemail = db.checkUser(Email);
-                        if(chkemail==true){
+                       /* if(chkemail==true){
                             Boolean insert = db.addUser();
                             if(insert==true){
                                 Toast.makeText(getApplicationContext(),"Registered Successfully",Toast.LENGTH_SHORT).show();
@@ -45,7 +45,7 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                         else{
                             Toast.makeText(getApplicationContext(),"Email Already exists",Toast.LENGTH_SHORT).show();
-                        }
+                        }*/
                     }
                     Toast.makeText(getApplicationContext(),"password do not match",Toast.LENGTH_SHORT).show();
                 }
@@ -57,4 +57,6 @@ public class SignUpActivity extends AppCompatActivity {
         Intent it = new Intent(this, LoginActivity.class);
         startActivity(it);
     }
+
+        
 }

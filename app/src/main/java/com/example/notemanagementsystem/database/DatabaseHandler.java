@@ -41,7 +41,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String STATUS_NAME = "status_name";
     private static final String STATUS_DATE = "status_date";
 
-<<<<<<< HEAD
+
     //note
     private static final String NOTE_TBL = "note_tbl";
     private static final String NOTE_ID = "note_ID";
@@ -52,7 +52,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String NOTE_CREATED_DATE = "note_createdDate";
     private static final String NOTE_PLAN_DATE = "note_planDate";
 
-=======
+
     //SignUp
     private static final String TABLE_USER = "user";
 
@@ -60,7 +60,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String COLUMN_USER_EMAIL = "user_email";
     private static final String COLUMN_USER_PASSWORD = "user_password";
     private static final String COLUMN_USER_ACTIVE = "user_active";
->>>>>>> e0a88f3ec140baee72fc8edfbefb57f9568123cf
     public DatabaseHandler(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 3);
         //this.context =   context;
@@ -82,15 +81,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         } catch (Exception ex) {
             Log.d("DatabaseHandler.onCreate", ex.getMessage());
         }
-<<<<<<< HEAD
+
         db.execSQL(CreateNoteTable());
 
        // db.execSQL("Create table note(note_name text(50) primary key ,note_createdDate date DEFAULT (datime('now','localtime')))");
         db.execSQL("Create table accout(email text primary key ,password text)");
-=======
+
         //db.execSQL("Create table accout(email text primary key ,password text)");
         db.execSQL(createTableUser);
->>>>>>> e0a88f3ec140baee72fc8edfbefb57f9568123cf
+
     }
 
     private String createTable() {
@@ -462,7 +461,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return ret;
     }
     //end status menthod
-<<<<<<< HEAD
+
 
 
     //note method
@@ -612,7 +611,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     //end note method
 
-=======
+
     public int createTableUser(){
         //id
         //email
@@ -637,17 +636,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return 1;
     }
 
-    public ArrayList<User> getUserFromEmail(String email){
-        ArrayList listUser;
+    //public ArrayList<User> getUserFromEmail(String email){
+        //ArrayList listUser;
         // get user where email = email
-        String[] columns = {
-                COLUMN_USER_ID,
-                COLUMN_USER_EMAIL,
-                COLUMN_USER_PASSWORD,
-                COLUMN_USER_ACTIVE
-        };
-        return listUser;
-    }
+       // String[] columns = {
+                //COLUMN_USER_ID,
+              //  COLUMN_USER_EMAIL,
+            //    COLUMN_USER_PASSWORD,
+          //      COLUMN_USER_ACTIVE
+        //};
+      //  return listUser;
+    //}
     public boolean checkUser(String email) {
 
         String[] columns = {
@@ -676,5 +675,5 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         return false;
     }
->>>>>>> e0a88f3ec140baee72fc8edfbefb57f9568123cf
+
 }
