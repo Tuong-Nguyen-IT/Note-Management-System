@@ -81,7 +81,7 @@ public class HomeFragment extends Fragment {
                 mau = Color.BLACK;
                 break;
             default:
-                mau = 1;
+                mau = i;
         }
         return mau;
     }
