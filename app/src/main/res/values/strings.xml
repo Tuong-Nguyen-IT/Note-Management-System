@@ -28,6 +28,7 @@
     <string name="edit_priority">Select priority...</string>
     <string name="edit_status">Select status...</string>
     <string name="edit_date">Select plain date</string>
+    <string name="update_note">Update</string>
 
     <!--Tuong Nguyen 10/11/2019-->
     <string name="label_edit_profile">Edit profile</string>

@@ -1104,7 +1104,10 @@ id btnHome
 id btnSignIn
 id btnsi
 id btnsu
+id buttonCloseEdit
 id buttonPanel
+id buttonPlandateEdit
+id buttonUpdateEdit
 id buttonadd
 id buttoncalender
 id buttonclose
@@ -1141,6 +1144,7 @@ id disableHome
 id drawer_layout
 id edit
 id editText
+id editTextNoteNameEdit
 id edit_query
 id email
 id end
@@ -1184,6 +1188,7 @@ id left
 id line1
 id line3
 id linearLayout
+id linearLayout2
 id listMode
 id listStatus
 id list_item
@@ -1264,6 +1269,9 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinnerCategoryEdit
+id spinnerPriorityEdit
+id spinnerStatusEdit
 id spinner_category
 id spinner_priority
 id spinner_status
@@ -1290,10 +1298,15 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView2
 id textViewCategory
 id textViewPlaindate
+id textViewPlanDateEdit
 id textViewPriority
+id textViewPriorityEdit
 id textViewStatus
+id textViewStatusEdit
+id textViewcategoryEdit
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1406,6 +1419,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout dialog_category
 layout dialog_note
+layout dialog_note_edit
 layout dialog_priority
 layout dialog_status
 layout fragment_category
@@ -1546,6 +1560,7 @@ string priority_form
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_main
+string update_note
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

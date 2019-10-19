@@ -47,9 +47,9 @@ import java.util.GregorianCalendar;
 
 public class NoteFragment extends Fragment implements DatePickerDialog.OnDateSetListener{
 
-    private TextView dateText,extName,txtCategoryName,txtStatusName,txtPriorityName;
+    private TextView dateText,dateTextEdit,extName,extNameEdit,txtCategoryName,txtStatusName,txtPriorityName,txtCategoryNameEdit,txtStatusNameEdit,txtPriorityNameEdit;
     private NoteViewModel noteViewModel;
-    private Spinner spnCategory,spnPriority,spnStatus;
+    private Spinner spnCategory,spnPriority,spnStatus,spnCategoryedit,spnPriorityedit,spnStatusedit;
     private ListView lvNote;
     private NoteAdapter adapter;
     private ArrayList<Note> data;
@@ -226,6 +226,115 @@ public class NoteFragment extends Fragment implements DatePickerDialog.OnDateSet
         });
     }
 
+    private void dialog_note_edit(final Note note) {
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.setContentView(R.layout.dialog_note_edit);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+
+        Button btncalender = (Button) dialog.findViewById(R.id.buttonPlandateEdit);
+        Button btnClose = (Button) dialog.findViewById(R.id.buttonCloseEdit);
+        Button btnAdd = (Button) dialog.findViewById(R.id.buttonUpdateEdit);
+        spnCategoryedit =(Spinner)dialog.findViewById(R.id.spinnerCategoryEdit);
+        spnPriorityedit =(Spinner)dialog.findViewById(R.id.spinnerPriorityEdit);
+        spnStatusedit =(Spinner)dialog.findViewById(R.id.spinnerStatusEdit);
+
+
+        dateTextEdit = (TextView) dialog.findViewById(R.id.textViewPlanDateEdit);
+        extNameEdit =(EditText) dialog.findViewById(R.id.editTextNoteNameEdit);
+        txtCategoryNameEdit =(TextView) dialog.findViewById(R.id.textViewcategoryEdit);
+        txtPriorityNameEdit =(TextView) dialog.findViewById(R.id.textViewPriorityEdit);
+        txtStatusNameEdit =(TextView) dialog.findViewById(R.id.textViewStatusEdit);
+
+        spinner(spnCategoryedit,txtCategoryNameEdit,new DatabaseHandler(getContext()).getAllCategoryName(),"Choose Category");
+        spinner(spnPriorityedit,txtPriorityNameEdit,new DatabaseHandler(getContext()).getAllPriorityName(), "Chopse Priority");
+        spinner(spnStatusedit,txtStatusNameEdit,new DatabaseHandler(getContext()).getAllStatusName(),"Choose Status");
+
+        btncalender.setOnClickListener(new View.OnClickListener() {
+            //@Override
+            public void onClick(View v) {
+                showDatePicker();
+
+            }
+        });
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            //@Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        if (note != null) {
+            extNameEdit.setText(note.getName());
+            txtCategoryNameEdit.setText(note.getCategory_name());
+            txtPriorityNameEdit.setText(note.getPriority_name());
+            txtStatusNameEdit.setText(note.getStatus_name());
+            dateTextEdit.setText(note.getPlan_date());
+        }
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = extNameEdit.getText().toString();
+                String category_name = txtCategoryNameEdit.getText().toString();
+                String priority_name = txtPriorityNameEdit.getText().toString();
+                String status_name = txtStatusNameEdit.getText().toString();
+                String plan_date = dateTextEdit.getText().toString();
+
+                if (name.isEmpty()) {
+                    Toast.makeText(getActivity(), "Please enter note name", Toast.LENGTH_LONG).show();
+                    extNameEdit.requestFocus();
+                    return;
+                }
+
+                if (category_name.equals("Select category...")) {
+                    Toast.makeText(getActivity(), "Please enter category name", Toast.LENGTH_LONG).show();
+                    txtCategoryNameEdit.requestFocus();
+                    return;
+                }
+
+                if (priority_name.equals("Select priority...")) {
+                    Toast.makeText(getActivity(), "Please enter priority name", Toast.LENGTH_LONG).show();
+                    txtPriorityNameEdit.requestFocus();
+                    return;
+                }
+
+                if (status_name.equals("Select status...")) {
+                    Toast.makeText(getActivity(), "Please enter status name", Toast.LENGTH_LONG).show();
+                    txtStatusNameEdit.requestFocus();
+                    return;
+                }
+
+                if (plan_date.equals("Select plain date")) {
+                    Toast.makeText(getActivity(), "Please enter plan date", Toast.LENGTH_LONG).show();
+                    dateTextEdit.requestFocus();
+                    return;
+                }
+
+                long ret = 0;
+                if (note == null) {
+                    ret = noteViewModel.insertNote(new Note(name,category_name,priority_name,status_name,plan_date));
+                    if (ret > 0) {
+                        Toast.makeText(getActivity(), "Add note successfully", Toast.LENGTH_LONG).show();
+                    }
+                } else { // Update category name
+
+                    ret = noteViewModel.updateNote(note.getName(), new Note(name,category_name,priority_name,status_name,plan_date));
+                    //test();
+                    if (ret > 0) {
+                        Toast.makeText(getActivity(), "Update note successfully", Toast.LENGTH_LONG).show();
+                    }
+                }
+                // Successful
+                if (ret > 0) {
+                    noteViewModel.getNote().setValue(noteViewModel.getAllNote());
+                    dialog.dismiss();
+                }
+            }
+        });
+    }
+
     private void spinner(final Spinner spinner, final TextView textView, ArrayList<String> arrayList, final String caption){
         arrayList.add(0,caption);
         ArrayAdapter<String> adapterCate = new ArrayAdapter(getActivity(),android.R.layout.simple_spinner_item,arrayList);
@@ -286,7 +395,7 @@ public class NoteFragment extends Fragment implements DatePickerDialog.OnDateSet
         switch (itemId) {
             case R.id.edit: // Update category name
                 if (note != null) {
-                    dialog_note(note);
+                    dialog_note_edit(note);
                 }
                 break;
             case R.id.delete: // Delete category
