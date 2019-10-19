@@ -31,9 +31,15 @@ public class HomeViewModel extends AndroidViewModel {
     private ArrayList<Note> setNote() {
         return database.getAllNote();
     }
-    public int countStatus(String nameTable){
-        int count = 0;
-        count = database.countStatus(nameTable);
+
+    public float countStatus(String nameStatus){
+        float count = 0;
+        count = count+database.countStatus(nameStatus);
+        return count;
+    }
+    public float sumStatus(){
+        float count = 0;
+        count = count+database.sumStatus();
         return count;
     }
 

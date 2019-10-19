@@ -39,17 +39,17 @@ public class HomeFragment extends Fragment {
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-
-        String a = "Day la mau so "+Color.BLUE;
-        Toast.makeText(this.getContext(), a, Toast.LENGTH_SHORT).show();
-
         List<SliceValue> pieList = new ArrayList<>();
         dataStatus = new ArrayList<>();
         dataStatus = homeViewModel.getStatusArray();
+        //homeViewModel.countStatus(dataStatus.get(0).getName())
         int dem=0;
+        float sum = homeViewModel.sumStatus();
+        String a = ""+sum;
+        Toast.makeText(this.getActivity(), a, Toast.LENGTH_SHORT).show();
         while (dem < dataStatus.size()){
-
-            pieList.add(new SliceValue(50,color(dem)).setLabel(dataStatus.get(dem).getName()+" ? %"));
+            float avg = (homeViewModel.countStatus(dataStatus.get(dem).getName())/sum)*100;
+            pieList.add(new SliceValue((int)avg,color(dem)).setLabel(dataStatus.get(dem).getName()+" "+avg+" %"));
             dem++;
         }
         PieChartData pieData = new PieChartData(pieList);
@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment {
 
         PieChartView pieView = root.findViewById(R.id.piechart);
         pieView.setPieChartData(pieData);
+
         return root;
 
     }

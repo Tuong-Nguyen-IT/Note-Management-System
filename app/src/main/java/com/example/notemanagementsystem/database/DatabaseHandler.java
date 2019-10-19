@@ -698,12 +698,43 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return false;
     }
 
-    public int countStatus(String status){
+    public float countStatus(String nameStatus){
         int dem=0;
+        //String test="";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = null;
         try {
-            cursor = db.query(NOTE_TBL, null, null, null, null, null, null);
+            StringBuffer sb = new StringBuffer();
+
+            //sb.append("select count(*)").append(" from ").append(NOTE_TBL).append(" where ").append(NOTE_STATUS_NAME).append(" = ").append(nameStatus);
+            sb.append("select count(*)").append(" from ").append(NOTE_TBL).append(" where ").append(NOTE_STATUS_NAME).append(" = '"+nameStatus+"'");
+            cursor = db.rawQuery(sb.toString(),null);
+            while (cursor.moveToNext()) {
+                dem = cursor.getInt(0);
+            }
+        } catch (Exception ex) {
+            Log.d("Database.getAllCategory", ex.getMessage());
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return dem;
+    }
+    public float sumStatus(){
+        int dem=0;
+        //String test="";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        try {
+            StringBuffer sb = new StringBuffer();
+
+            //sb.append("select count(*)").append(" from ").append(NOTE_TBL).append(" where ").append(NOTE_STATUS_NAME).append(" = ").append(nameStatus);
+            sb.append("select count(*)").append(" from ").append(TABLE_STATUS);
+            cursor = db.rawQuery(sb.toString(),null);
             while (cursor.moveToNext()) {
                 dem = cursor.getInt(0);
             }
