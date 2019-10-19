@@ -5523,12 +5523,11 @@ public final class R {
     public static final int unlabeled=0x7f08011a;
     public static final int up=0x7f08011b;
     public static final int useLogo=0x7f08011c;
-    public static final int useremail=0x7f08011d;
-    public static final int view_offset_helper=0x7f08011e;
-    public static final int visible=0x7f08011f;
-    public static final int withText=0x7f080120;
-    public static final int wrap=0x7f080121;
-    public static final int wrap_content=0x7f080122;
+    public static final int view_offset_helper=0x7f08011d;
+    public static final int visible=0x7f08011e;
+    public static final int withText=0x7f08011f;
+    public static final int wrap=0x7f080120;
+    public static final int wrap_content=0x7f080121;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f090000;

@@ -45,8 +45,6 @@ public class HomeFragment extends Fragment {
         //homeViewModel.countStatus(dataStatus.get(0).getName())
         int dem=0;
         float sum = homeViewModel.sumStatus();
-        String a = ""+sum;
-        Toast.makeText(this.getActivity(), a, Toast.LENGTH_SHORT).show();
         while (dem < dataStatus.size()){
             float avg = (homeViewModel.countStatus(dataStatus.get(dem).getName())/sum)*100;
             pieList.add(new SliceValue((int)avg,color(dem)).setLabel(dataStatus.get(dem).getName()+" "+avg+" %"));

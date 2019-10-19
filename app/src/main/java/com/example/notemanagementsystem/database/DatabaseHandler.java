@@ -665,7 +665,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             StringBuffer sb = new StringBuffer();
 
             //sb.append("select count(*)").append(" from ").append(NOTE_TBL).append(" where ").append(NOTE_STATUS_NAME).append(" = ").append(nameStatus);
-            sb.append("select count(*)").append(" from ").append(TABLE_STATUS);
+            sb.append("select count(*)").append(" from ").append(NOTE_TBL);
             cursor = db.rawQuery(sb.toString(),null);
             while (cursor.moveToNext()) {
                 dem = cursor.getInt(0);

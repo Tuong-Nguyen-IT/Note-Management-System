@@ -6,66 +6,66 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml
+8-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml
+9-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:5:5-29:19
+11-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:5:5-29:19
 12        android:allowBackup="true"
-12-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:6:9-35
+12-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.0.1] C:\Users\Dell\.gradle\caches\transforms-2\files-2.1\46da25c3e2ae6308b2227b660caa604d\core-1.0.1\AndroidManifest.xml:22:18-86
+13-->[androidx.core:core:1.0.1] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\46da25c3e2ae6308b2227b660caa604d\core-1.0.1\AndroidManifest.xml:22:18-86
 14        android:debuggable="true"
 15        android:icon="@mipmap/ic_launcher"
-15-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:7:9-43
+15-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:7:9-43
 16        android:label="@string/app_name"
-16-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:8:9-41
+16-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:8:9-41
 17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:9:9-54
+17-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:9:9-54
 18        android:supportsRtl="true"
-18-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:10:9-35
+18-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:10:9-35
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
-20-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:11:9-40
+20-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:11:9-40
 21        <activity
-21-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:13:9-18:20
+21-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:13:9-18:20
 22            android:name="com.example.notemanagementsystem.MainActivity"
-22-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:14:13-41
+22-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:14:13-41
 23            android:label="@string/title_activity_main"
-23-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:15:13-56
+23-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:15:13-56
 24            android:theme="@style/AppTheme.NoActionBar" >
-24-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:16:13-56
+24-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:16:13-56
 25        </activity>
 26        <activity android:name="com.example.notemanagementsystem.SignUpActivity" >
-26-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:19:9-21:20
-26-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:19:19-49
+26-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:19:9-21:20
+26-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:19:19-49
 27        </activity>
 28        <activity android:name="com.example.notemanagementsystem.LoginActivity" >
-28-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:22:9-28:20
-28-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:22:19-48
+28-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:22:9-28:20
+28-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:22:19-48
 29            <intent-filter>
-29-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:23:13-27:29
+29-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:23:13-27:29
 30                <action android:name="android.intent.action.MAIN" />
-30-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:24:17-69
-30-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:24:25-66
+30-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:24:17-69
+30-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:24:25-66
 31
 32                <category android:name="android.intent.category.LAUNCHER" />
-32-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:26:17-77
-32-->C:\Users\Dell\Documents\Github2\Note-Management-System\app\src\main\AndroidManifest.xml:26:27-74
+32-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:26:17-77
+32-->D:\DH-N3\ChuyenDeXayDungUngDungTrenThietBiDiDong\Note-Management-System\app\src\main\AndroidManifest.xml:26:27-74
 33            </intent-filter>
 34        </activity>
 35
 36        <provider
-36-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+36-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
 37            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-37-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+37-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
 38            android:authorities="com.example.notemanagementsystem.lifecycle-process"
-38-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+38-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
 39            android:exported="false"
-39-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+39-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
 40            android:multiprocess="true" />
-40-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Dell\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+40-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\ngoct\.gradle\caches\transforms-2\files-2.1\7309f8169174f11110ad56440ca8f929\lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
 41    </application>
 42
 43</manifest>
